@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmwghd74x2lh0"]
+
+[ext_resource type="Texture2D" uid="uid://n6ltpnnft728" path="res://UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Folding & Cutout/1 Paper/31.png" id="1_hswwg"]
+[ext_resource type="Texture2D" uid="uid://cf7v662kdddu6" path="res://UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Folding & Cutout/2 Headers/4.png" id="2_eqo1y"]
+[ext_resource type="Texture2D" uid="uid://g0w65y4ui7av" path="res://UI/Retro Inventory/Original/Health_01.png" id="3_ij3he"]
+[ext_resource type="Texture2D" uid="uid://c875fchch5103" path="res://UI/Retro Inventory/Original/Health_01_Bar01.png" id="4_icwdj"]
+[ext_resource type="Texture2D" uid="uid://cp6js4tsm4oev" path="res://UI/Retro Inventory/Original/Hearts_Red_1.png" id="5_t0spl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ssp7c"]
+font_size = 27
+font_color = Color(0.509804, 0.266667, 0.254902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7fmlo"]
+font_color = Color(0.509804, 0.266667, 0.254902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rliw7"]
+font_size = 22
+font_color = Color(0.509804, 0.266667, 0.254902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pioor"]
+font_size = 70
+font_color = Color(0, 0.729412, 0.541176, 1)
+shadow_size = 17
+shadow_color = Color(0.760784, 0.603922, 0.764706, 0)
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.428
+anchor_right = 0.568
+anchor_bottom = 0.011
+offset_left = 98.3519
+offset_right = 92.7519
+offset_bottom = -1.089
+grow_horizontal = 2
+
+[node name="formula" type="Sprite2D" parent="Control"]
+position = Vector2(541, 64)
+scale = Vector2(8, 3.5)
+texture = ExtResource("1_hswwg")
+
+[node name="C" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 16.0
+offset_right = 559.0
+offset_bottom = 74.0
+text = "C  =     (2n)!"
+label_settings = SubResource("LabelSettings_ssp7c")
+
+[node name="C2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 48.0
+offset_right = 583.0
+offset_bottom = 106.0
+text = "      (n+1)!n!"
+label_settings = SubResource("LabelSettings_ssp7c")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 48.0
+offset_right = 589.0
+offset_bottom = 51.0
+color = Color(0.509804, 0.266667, 0.254902, 1)
+
+[node name="n_minus" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 32.0
+offset_right = 453.0
+offset_bottom = 58.0
+text = "n"
+label_settings = SubResource("LabelSettings_7fmlo")
+
+[node name="contenedorLabel" type="Sprite2D" parent="Control"]
+position = Vector2(13.0001, 40)
+scale = Vector2(1, 1.35714)
+texture = ExtResource("2_eqo1y")
+
+[node name="numCatalanActual" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 32.0
+offset_right = 637.0
+offset_bottom = 66.0
+text = "= 4"
+label_settings = SubResource("LabelSettings_rliw7")
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -3.0
+offset_top = -16.0
+offset_right = 37.0
+offset_bottom = 83.0
+grow_horizontal = 2
+text = "0
+"
+label_settings = SubResource("LabelSettings_pioor")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 48.0
+offset_top = 40.0
+offset_right = 114.0
+offset_bottom = 56.0
+scale = Vector2(4, 4)
+texture_under = ExtResource("3_ij3he")
+texture_progress = ExtResource("4_icwdj")
+
+[node name="HeartsRed1" type="Sprite2D" parent="TextureProgressBar"]
+position = Vector2(10, 8)
+texture = ExtResource("5_t0spl")
+metadata/_edit_group_ = true
