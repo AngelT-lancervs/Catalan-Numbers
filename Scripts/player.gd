@@ -50,7 +50,6 @@ func _physics_process(delta):
 	
 	animaciones()
 	move_and_slide()
-	
 
 func animaciones():
 	if direccionX != 0 or direccionY != 0:
@@ -82,7 +81,7 @@ func animaciones():
 	
 func _on_hitbox_body_entered(body):
 	if body != self :
-		var enem : Enemigo = body
+		var enem = body
 		if enem.hitboxGlobal.disabled == false:
 			damage_player(body.damage)
 			body.queue_free()
@@ -115,7 +114,7 @@ func damage_player(damage):
 
 func _on_sword_hit_box_body_entered(body):
 	if body != self:
-		var enem : Enemigo = body
+		var enem = body
 		if enem.hitboxGlobal.disabled == false:
 			enem.sprites.play("die")
 			enem.velocidad = 0

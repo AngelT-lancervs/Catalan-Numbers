@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://bj3qd45iobklu"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_50uxn"]
-[ext_resource type="Texture2D" uid="uid://bmvcd8i3mvclv" path="res://Characters/Hero Knight/Sprites/HeroKnight/HeroKnight.png" id="2_y5m0e"]
+[ext_resource type="Texture2D" uid="uid://bmvcd8i3mvclv" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/HeroKnight.png" id="2_y5m0e"]
 
 [sub_resource type="Animation" id="Animation_vi650"]
 step = 0.001
