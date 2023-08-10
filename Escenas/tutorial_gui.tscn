@@ -1,0 +1,257 @@
+[gd_scene load_steps=53 format=3 uid="uid://fjoh0rcrhl8w"]
+
+[ext_resource type="Script" path="res://Escenas/tutorial_gui.gd" id="1_4q7hf"]
+[ext_resource type="Texture2D" uid="uid://sdftq6ti7w5" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/1.png" id="1_qwwbw"]
+[ext_resource type="Texture2D" uid="uid://bw765lxcgdywh" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/2.png" id="2_itjjw"]
+[ext_resource type="Texture2D" uid="uid://b7q15vrrmell3" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/3.png" id="3_4rh0p"]
+[ext_resource type="Texture2D" uid="uid://dqt0rnp7lh60m" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/4.png" id="4_qf2ag"]
+[ext_resource type="Texture2D" uid="uid://df31oul0s4vms" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/5.png" id="5_qs6yt"]
+[ext_resource type="Texture2D" uid="uid://wyqy1ol6d5nx" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/6.png" id="6_7j44n"]
+[ext_resource type="Texture2D" uid="uid://dcrfdhc0uyw2v" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/7.png" id="7_g1jvb"]
+[ext_resource type="Texture2D" uid="uid://cxt3a6nmtoyao" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/8.png" id="8_7kwon"]
+[ext_resource type="Texture2D" uid="uid://ck7fr7lmydqgg" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/9.png" id="9_cx5fb"]
+[ext_resource type="Texture2D" uid="uid://vv3r2qslkxpq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/10.png" id="10_70wgw"]
+[ext_resource type="Texture2D" uid="uid://ctfi4lph0dgs6" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/11.png" id="11_0yw0o"]
+[ext_resource type="Texture2D" uid="uid://teawsirmoymx" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/12.png" id="12_tfcjf"]
+[ext_resource type="Texture2D" uid="uid://fq54n8cwlgmv" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/13.png" id="13_wcwxv"]
+[ext_resource type="Texture2D" uid="uid://bpa1jaoj6c34o" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/14.png" id="14_5l1y8"]
+[ext_resource type="Texture2D" uid="uid://r5vidhfcw46s" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/15.png" id="15_x44p8"]
+[ext_resource type="Texture2D" uid="uid://0ookyrxyj8fp" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/16.png" id="16_665pu"]
+[ext_resource type="Texture2D" uid="uid://2h1hdqhr2iyk" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/17.png" id="17_gyowd"]
+[ext_resource type="Texture2D" uid="uid://dvtt0kd6urcl1" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/18.png" id="18_2se7f"]
+[ext_resource type="Texture2D" uid="uid://dm0r1iqr1j0ho" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/19.png" id="19_bl3k8"]
+[ext_resource type="Texture2D" uid="uid://5e6crwjia6lt" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/20.png" id="20_hbdfj"]
+[ext_resource type="Texture2D" uid="uid://c5240cryi5ls8" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/21.png" id="21_2h64h"]
+[ext_resource type="Texture2D" uid="uid://1shfttped6re" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/22.png" id="22_ut4nk"]
+[ext_resource type="Texture2D" uid="uid://6w1if13vs0jk" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/23.png" id="23_g5nuu"]
+[ext_resource type="Texture2D" uid="uid://dmg0wx7ot0hk6" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/24.png" id="24_83psi"]
+[ext_resource type="Texture2D" uid="uid://d13kuwghwjgds" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/25.png" id="25_jsb3e"]
+[ext_resource type="Texture2D" uid="uid://bem28i1ywxu6w" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/26.png" id="26_5mgv8"]
+[ext_resource type="Texture2D" uid="uid://dapstn1eiesr4" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/27.png" id="27_lu21k"]
+[ext_resource type="Texture2D" uid="uid://cdu466446844i" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/28.png" id="28_nxkqx"]
+[ext_resource type="Texture2D" uid="uid://3pskpvnxo03t" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/29.png" id="29_1ykhf"]
+[ext_resource type="Texture2D" uid="uid://dqkuvc6xuojcl" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/30.png" id="30_cj74u"]
+[ext_resource type="Texture2D" uid="uid://cpp81b4m66gca" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/31.png" id="31_7g2v7"]
+[ext_resource type="Texture2D" uid="uid://dg45ud4cixdkk" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/32.png" id="32_5411k"]
+[ext_resource type="Texture2D" uid="uid://bl0o7bv6vdkou" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/33.png" id="33_x38av"]
+[ext_resource type="Texture2D" uid="uid://ccgsh4ir1b2e4" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/34.png" id="34_sebue"]
+[ext_resource type="Texture2D" uid="uid://cswg8ynk8uqjv" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/35.png" id="35_kktvi"]
+[ext_resource type="Texture2D" uid="uid://d1kj6qbw65uu1" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/36.png" id="36_fo6ax"]
+[ext_resource type="Texture2D" uid="uid://dgw5fuodges1d" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/37.png" id="37_l7wsr"]
+[ext_resource type="Texture2D" uid="uid://c30482w74cesw" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/38.png" id="38_ma6cj"]
+[ext_resource type="Texture2D" uid="uid://bc0hrxuestthf" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/39.png" id="39_wjgst"]
+[ext_resource type="Texture2D" uid="uid://df2708e34qbv4" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/40.png" id="40_qw7p4"]
+[ext_resource type="Texture2D" uid="uid://dgnhbyo6koc5g" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/41.png" id="41_8wjtx"]
+[ext_resource type="Texture2D" uid="uid://b6wv3xk0ku7ty" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/42.png" id="42_70f6b"]
+[ext_resource type="Texture2D" uid="uid://dirqhh0bkdti5" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/43.png" id="43_5hjve"]
+[ext_resource type="Texture2D" uid="uid://dolwal58mxvno" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/44.png" id="44_8xvj4"]
+[ext_resource type="Texture2D" uid="uid://ckw8cjbyagsp2" path="res://Assets/Characters/fairy/fairy_1.png" id="46_fh5e4"]
+[ext_resource type="Texture2D" uid="uid://cs0fvnc2o7l0" path="res://Assets/Characters/fairy/fairy_2.png" id="47_ftep1"]
+[ext_resource type="Texture2D" uid="uid://cda7k5dgvu167" path="res://Assets/Characters/fairy/fairy_3.png" id="48_yl1pc"]
+[ext_resource type="Texture2D" uid="uid://dg3prha8aa8he" path="res://Assets/Characters/fairy/fairy_4.png" id="49_36jar"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2s6ix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qwwbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_itjjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4rh0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qf2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qs6yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7j44n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g1jvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7kwon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cx5fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_70wgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0yw0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tfcjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wcwxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5l1y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_x44p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_665pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gyowd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2se7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bl3k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hbdfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2h64h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ut4nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g5nuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_83psi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jsb3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5mgv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lu21k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_nxkqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_1ykhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_cj74u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7g2v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5411k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_x38av")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_sebue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kktvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fo6ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_l7wsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ma6cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wjgst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_qw7p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8wjtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_70f6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5hjve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_8xvj4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 40.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gv6vl"]
+font_size = 32
+font_color = Color(0.435294, 0.309804, 0.823529, 1)
+shadow_color = Color(0.47451, 0.654902, 0.211765, 0.470588)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6nfp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_fh5e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ftep1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_yl1pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_36jar")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[node name="tutorial_gui" type="CanvasLayer"]
+script = ExtResource("1_4q7hf")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.447059)
+
+[node name="cajaTexto" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(686, 630)
+scale = Vector2(2.25, 1.48438)
+sprite_frames = SubResource("SpriteFrames_2s6ix")
+
+[node name="dialogoActual" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.029
+anchor_bottom = 0.032
+offset_left = 71.0
+offset_top = 574.0
+offset_right = 1260.39
+offset_bottom = 668.96
+label_settings = SubResource("LabelSettings_gv6vl")
+
+[node name="fairy" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(99, 518)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_y6nfp")

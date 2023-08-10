@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://gyg3l6r5h25b"]
 
-[ext_resource type="Texture2D" uid="uid://dx6vjqwkp034" path="res://Assets/Tiles/Starter Tiles Platformer/BasicGreen.png" id="1_mtkxq"]
-[ext_resource type="Texture2D" uid="uid://lw1ydll22atx" path="res://Assets/Tiles/Starter Tiles Platformer/IceSet.png" id="2_a47kp"]
-[ext_resource type="Texture2D" uid="uid://cus5f30y50dlh" path="res://Assets/Tiles/Starter Tiles Platformer/DarkCastle.png" id="3_1d0e2"]
-[ext_resource type="Texture2D" uid="uid://cvnwes3xu2lyb" path="res://Assets/Tiles/Starter Tiles Platformer/FireSet.png" id="4_pyhes"]
-[ext_resource type="Texture2D" uid="uid://q8cgp4m1lpt6" path="res://Assets/Tiles/Starter Tiles Platformer/Swampset.png" id="5_nhba7"]
-[ext_resource type="Texture2D" uid="uid://c0orubm2kgfsf" path="res://Assets/Tiles/Starter Tiles Platformer/OutdoorHouseSet.png" id="6_qmsfa"]
+[ext_resource type="Texture2D" uid="uid://dx6vjqwkp034" path="res://Tiles/Starter Tiles Platformer/BasicGreen.png" id="1_mtkxq"]
+[ext_resource type="Texture2D" uid="uid://lw1ydll22atx" path="res://Tiles/Starter Tiles Platformer/IceSet.png" id="2_a47kp"]
+[ext_resource type="Texture2D" uid="uid://cus5f30y50dlh" path="res://Tiles/Starter Tiles Platformer/DarkCastle.png" id="3_1d0e2"]
+[ext_resource type="Texture2D" uid="uid://cvnwes3xu2lyb" path="res://Tiles/Starter Tiles Platformer/FireSet.png" id="4_pyhes"]
+[ext_resource type="Texture2D" uid="uid://q8cgp4m1lpt6" path="res://Tiles/Starter Tiles Platformer/Swampset.png" id="5_nhba7"]
+[ext_resource type="Texture2D" uid="uid://c0orubm2kgfsf" path="res://Tiles/Starter Tiles Platformer/OutdoorHouseSet.png" id="6_qmsfa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jpot"]
 texture = ExtResource("1_mtkxq")

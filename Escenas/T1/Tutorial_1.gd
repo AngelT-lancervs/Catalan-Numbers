@@ -1,29 +1,52 @@
 extends Node
 
 @export var siguiente_escena : String
-@export var enemy : PackedScene
+var packedScenePath = "res://Escenas/T1/enemigo.tscn"
+var enemy = ResourceLoader.load(packedScenePath) as PackedScene
 @export var enemyNumber = 0
 @onready var timer = $Timer
 @onready var player = $player
 var tmp = 0
 @onready var timerLabel : Label = $GUI/TimerLabel
 @onready var numActualCatalan = $GUI/Control/numCatalanActual
-var numberEnemyDinamic = enemyNumber
+var enemigoBait : Enemigo
+var countTmp = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	TRANSITION.fade_out()
-	_on_mob_timer_timeout()
 	new_game()
+	add_child(enemy.instantiate())
+	timer.paused = true
+	TRANSITION.fade_out()
+	enemigoBait = get_child(-1)
+	enemigoBait.position.x = -999
+	enemigoBait.position.y = -999
+	enemigoBait.visible = false
 	randomize()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	progressBar()
-	gameOver()
-	comprobarWin()
-	var timeleft : float = timer.time_left 
-	timerLabel.text = str(timeleft).pad_decimals(0)
+	
+	if  $tutorial_gui.visible == false:
+		if countTmp == 0:
+			timer.paused = false
+			countTmp
+		if player != null:
+			if player.health > 0:
+				player.velocidad = 300
+		gameOver()
+		comprobarWin()
+		$StartTimer.paused = false
+		$MobTimer.paused = false
+		if timerLabel.text != "DONE!":
+			timerLabel.text = "..."
+	else:
+		player.velocidad = 0
+		$MobTimer.paused = true
+		$StartTimer.paused = true
+		
 
 func new_game():
 	$StartTimer.start()
@@ -39,6 +62,8 @@ func _on_start_timer_timeout():
 
 func _on_mob_timer_timeout():
 	if tmp <= enemyNumber: 
+		if !(get_child(-1) is Enemigo):
+			await get_tree().create_timer(5).timeout
 		var mob = enemy.instantiate()
 		mob.position.x = randi_range(64, 1300)
 		mob.position.y = randi_range(64,580)
@@ -46,7 +71,9 @@ func _on_mob_timer_timeout():
 		mob.scale.y = 3.5
 		tmp += 1
 		add_child(mob)
-		numberEnemyDinamic -= 1
+		if enemigoBait != null:
+			get_child(-2).free()
+		
 	
 func clear_enemies():
 	for child in get_children():
@@ -100,7 +127,7 @@ func comprobarWin():
 		if child is Enemigo:
 			enemigos.append(child)
 	print(enemigos.size())
-	if enemigos.size() == 0 && numberEnemyDinamic != enemyNumber:
+	if enemigos.size() == 0:
 		if player != null:
 			if player.currentState != 4:
 				$portal.visible = true
@@ -108,11 +135,11 @@ func comprobarWin():
 				$portal/AnimatedSprite2D.visible = true
 				$portal/AnimatedSprite2D.play("idle")
 				timer.paused = true
+				timerLabel.text = "DONE!"
 				
 
-
 func _on_portal_body_entered(body):
-	if body != null && !body.is_in_group("enemigos"):
+	if body != null && !(body is Enemigo):
 		TRANSITION.changeEscena(siguiente_escena)
 		print("win")
 		

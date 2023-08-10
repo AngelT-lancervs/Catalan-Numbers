@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 class_name Enemigo
 
 @onready var sprites = $AnimatedSprite2D
@@ -48,8 +47,6 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	jugador = null
 
-
-
 func _on_cambiar_direccion_timeout():
 	if jugador == null:
 		randomize()
@@ -64,3 +61,4 @@ func _on_cambiar_direccion_timeout():
 			3:
 				vector.y = -1
 		
+

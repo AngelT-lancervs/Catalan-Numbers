@@ -10,7 +10,7 @@ enum CharacterState {
 }
 
 var currentState
-var velocidad := 200
+var velocidad := 300
 var direccionX := 0.0
 var direccionY := 0.0
 @onready var sprite = $Sprite2D
@@ -122,4 +122,5 @@ func _on_sword_hit_box_body_entered(body):
 			enem.collision.disabled = true
 			enem.area2d.disabled = true
 			await get_tree().create_timer(2).timeout
-			body.free()
+			if body != null:
+				body.free()

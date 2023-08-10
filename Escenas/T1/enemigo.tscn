@@ -1,7 +1,7 @@
 [gd_scene load_steps=67 format=3 uid="uid://d0laegdixmkyt"]
 
 [ext_resource type="Texture2D" uid="uid://78mxgx00yn8" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Attack.png" id="1_8unbd"]
-[ext_resource type="Script" path="res://Escenas/T1/enemigo.gd" id="1_xr22s"]
+[ext_resource type="Script" path="res://Escenas/T2/enemigo.gd" id="1_jf5c0"]
 [ext_resource type="Texture2D" uid="uid://kii24iygjpt" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Dead.png" id="2_ewru1"]
 [ext_resource type="Texture2D" uid="uid://bvhl2cxefqs3j" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Idle.png" id="2_ttyba"]
 [ext_resource type="Texture2D" uid="uid://b30qwn1h77pr6" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Walk.png" id="3_5560s"]
@@ -443,8 +443,7 @@ size = Vector2(20, 26)
 [node name="enemigo" type="CharacterBody2D"]
 collision_layer = 15
 collision_mask = 15
-script = ExtResource("1_xr22s")
-damage = 50
+script = ExtResource("1_jf5c0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, 4)
@@ -477,5 +476,4 @@ autostart = true
 
 [connection signal="body_entered" from="deteccion" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="deteccion" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="CambiarDireccion" to="." method="_on_cambiar_direccion_timeout"]
