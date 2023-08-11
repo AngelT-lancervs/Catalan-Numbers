@@ -11,42 +11,39 @@ var tmp = 0
 @onready var numActualCatalan = $GUI/Control/numCatalanActual
 var enemigoBait : Enemigo
 var countTmp = 0
+var animacionInicial = true
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	new_game()
 	add_child(enemy.instantiate())
-	timer.paused = true
-	TRANSITION.fade_out()
 	enemigoBait = get_child(-1)
 	enemigoBait.position.x = -999
 	enemigoBait.position.y = -999
 	enemigoBait.visible = false
+	timer.paused = true
+	TRANSITION.mostrarFigura(1)
+	timer.paused = false
+	new_game()
 	randomize()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	progressBar()
+	if player != null:
+		if player.health > 0:
+			player.velocidad = 300
+	await get_tree().create_timer(0.3).timeout
+
+	gameOver()
+	comprobarWin()
+
+	if timerLabel.text != "DONE!":
+		var timeleft : float = timer.time_left 
+		timerLabel.text = str(timeleft).pad_decimals(0)
 	
-	if  $tutorial_gui.visible == false:
-		if countTmp == 0:
-			timer.paused = false
-			countTmp+=1
-		if player != null:
-			if player.health > 0:
-				player.velocidad = 300
-		gameOver()
-		comprobarWin()
-		$StartTimer.paused = false
-		$MobTimer.paused = false
-		if timerLabel.text != "DONE!":
-			var timeleft : float = timer.time_left 
-			timerLabel.text = str(timeleft).pad_decimals(0)
-	else:
-		player.velocidad = 0
+	if $GameOver.visible == true:
 		$MobTimer.paused = true
-		$StartTimer.paused = true
 		
 
 func new_game():
@@ -85,6 +82,7 @@ func gameOver():
 		if player.health == 0:
 			await get_tree().create_timer(2).timeout
 			if player != null:
+				$MobTimer.stop()
 				player.queue_free()
 				$GUI.visible = false
 				$GameOver.visible = true
@@ -129,7 +127,7 @@ func comprobarWin():
 	print(enemigos.size())
 	if enemigos.size() == 0:
 		if player != null:
-			if player.currentState != 4 && tmp > 4 :
+			if player.currentState != 4 && tmp > 4:
 				$portal.visible = true
 				$portal/CollisionShape2D.disabled = false
 				$portal/AnimatedSprite2D.visible = true

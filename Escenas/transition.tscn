@@ -1,6 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://cju2ujmlwqccx"]
+[gd_scene load_steps=47 format=3 uid="uid://cju2ujmlwqccx"]
 
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="1_23hdt"]
+[ext_resource type="Texture2D" uid="uid://2s0qinb7h3gv" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/1.png" id="2_6f88x"]
+[ext_resource type="Texture2D" uid="uid://cagyw7o5ushai" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/2.png" id="3_vutyd"]
+[ext_resource type="Texture2D" uid="uid://b7ukwrsvsjg82" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/3.png" id="4_jdmvb"]
+[ext_resource type="Texture2D" uid="uid://l557ywhluihe" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/4.png" id="5_rdej0"]
+[ext_resource type="Texture2D" uid="uid://spmvwdrjmovw" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/5.png" id="6_vuhor"]
+[ext_resource type="Texture2D" uid="uid://dnr5vc4l2u2df" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/6.png" id="7_hr2vn"]
+[ext_resource type="Texture2D" uid="uid://casnujl0tvd5w" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/7.png" id="8_6yfy3"]
+[ext_resource type="Texture2D" uid="uid://chfn45rf24mep" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/8.png" id="9_0tsla"]
+[ext_resource type="Texture2D" uid="uid://cdu25ia8ymf5h" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/9.png" id="10_82mx8"]
+[ext_resource type="Texture2D" uid="uid://bxxq3x55nowlq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/10.png" id="11_4wvif"]
+[ext_resource type="Texture2D" uid="uid://ddy1fo5shh6a5" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/11.png" id="12_ua34s"]
+[ext_resource type="Texture2D" uid="uid://csi1d3ve2m4pk" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/12.png" id="13_6ob82"]
+[ext_resource type="Texture2D" uid="uid://hnpx78ninfhg" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/13.png" id="14_qvfki"]
+[ext_resource type="Texture2D" uid="uid://xtjqx0unl0iq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/14.png" id="15_uo272"]
+[ext_resource type="Texture2D" uid="uid://8301iqwp5kuc" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/15.png" id="16_6snxl"]
+[ext_resource type="Texture2D" uid="uid://cs6j4xuevhk4x" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/16.png" id="17_c8n0f"]
+[ext_resource type="Texture2D" uid="uid://cbi8r8r80hvth" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/17.png" id="18_jp7vi"]
+[ext_resource type="Texture2D" uid="uid://dx324ruot7gi1" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/18.png" id="19_mfgfm"]
+[ext_resource type="Texture2D" uid="uid://bk1blpgnfbwne" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/19.png" id="20_dgpub"]
+[ext_resource type="Texture2D" uid="uid://du3me3muhvwtm" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/20.png" id="21_oqvam"]
+[ext_resource type="Texture2D" uid="uid://belnvpovu1240" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/21.png" id="22_h3neb"]
+[ext_resource type="Texture2D" uid="uid://cdh3g3o1357qy" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/22.png" id="23_l5kg4"]
+[ext_resource type="Texture2D" uid="uid://ei6vyao23r6h" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/23.png" id="24_pr0ee"]
+[ext_resource type="Texture2D" uid="uid://bq3abc5bx0q3" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/24.png" id="25_7i433"]
+[ext_resource type="Texture2D" uid="uid://crkgsf8rf1blf" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/25.png" id="26_s33uj"]
+[ext_resource type="Texture2D" uid="uid://dx1rso2hrlhy6" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/26.png" id="27_pjtoe"]
+[ext_resource type="Texture2D" uid="uid://bga0b6rowrc2g" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/27.png" id="28_tyacw"]
+[ext_resource type="Texture2D" uid="uid://dv7fec0eleg5c" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/28.png" id="29_doraw"]
+[ext_resource type="Texture2D" uid="uid://cj3a5m0hta76f" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/29.png" id="30_pg5vo"]
+[ext_resource type="Texture2D" uid="uid://dyx4qh1a2xby7" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/30.png" id="31_1asbr"]
+[ext_resource type="Texture2D" uid="uid://dwegvpb2qwbdo" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/31.png" id="32_pra41"]
+[ext_resource type="Texture2D" uid="uid://bw5i3ghxcpk4d" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/32.png" id="33_axu6u"]
+[ext_resource type="Texture2D" uid="uid://bwedsgbdejnvj" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/33.png" id="34_odbr4"]
+[ext_resource type="Texture2D" uid="uid://77jk0ds7i8oq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/34.png" id="35_3dkqf"]
+[ext_resource type="Texture2D" uid="uid://c0kpf1airgo8h" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/35.png" id="36_jw54i"]
+[ext_resource type="Texture2D" uid="uid://co6t3ieqyfl0s" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/8 Shop/36.png" id="37_j64re"]
+[ext_resource type="Texture2D" uid="uid://ckw8cjbyagsp2" path="res://Assets/Characters/fairy/fairy_1.png" id="38_bpdo4"]
+[ext_resource type="Texture2D" uid="uid://cs0fvnc2o7l0" path="res://Assets/Characters/fairy/fairy_2.png" id="39_b48w7"]
+[ext_resource type="Texture2D" uid="uid://cda7k5dgvu167" path="res://Assets/Characters/fairy/fairy_3.png" id="40_g6jum"]
+[ext_resource type="Texture2D" uid="uid://dg3prha8aa8he" path="res://Assets/Characters/fairy/fairy_4.png" id="41_jgf88"]
 
 [sub_resource type="Animation" id="Animation_qst0q"]
 length = 0.001
@@ -39,6 +79,142 @@ _data = {
 "fade": SubResource("Animation_2ca1c")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rua5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6f88x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vutyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jdmvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rdej0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vuhor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hr2vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6yfy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0tsla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_82mx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4wvif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ua34s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6ob82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qvfki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uo272")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6snxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_c8n0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jp7vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mfgfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dgpub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oqvam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_h3neb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_l5kg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_pr0ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_7i433")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_s33uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pjtoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_tyacw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_doraw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_pg5vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1asbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pra41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_axu6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_odbr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3dkqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jw54i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_j64re")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnw6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_bpdo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_b48w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_g6jum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jgf88")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="transition" type="CanvasLayer"]
 script = ExtResource("1_23hdt")
 
@@ -54,3 +230,28 @@ color = Color(0, 0, 0, 0)
 libraries = {
 "": SubResource("AnimationLibrary_y0mk5")
 }
+
+[node name="formaActual" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.509
+anchor_top = 0.437
+anchor_right = 0.509
+anchor_bottom = 0.437
+offset_left = -233.294
+offset_top = -127.64
+offset_right = 233.706
+offset_bottom = 128.36
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="contenedor" type="AnimatedSprite2D" parent="formaActual"]
+visible = false
+position = Vector2(231, 123)
+sprite_frames = SubResource("SpriteFrames_2rua5")
+
+[node name="figura1" type="AnimatedSprite2D" parent="formaActual"]
+visible = false
+position = Vector2(224.25, 134.25)
+scale = Vector2(4.79688, 5.04687)
+sprite_frames = SubResource("SpriteFrames_jnw6b")

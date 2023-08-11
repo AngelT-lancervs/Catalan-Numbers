@@ -11,6 +11,7 @@ var tmp = 0
 @onready var numActualCatalan = $GUI/Control/numCatalanActual
 var enemigoBait : Enemigo
 var countTmp = 0
+var animacionInicial = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,17 +19,16 @@ func _ready():
 	new_game()
 	add_child(enemy.instantiate())
 	timer.paused = true
-	TRANSITION.fade_out()
 	enemigoBait = get_child(-1)
 	enemigoBait.position.x = -999
 	enemigoBait.position.y = -999
 	enemigoBait.visible = false
+	TRANSITION.mostrarFigura(-1)
 	randomize()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	progressBar()
-	
 	if  $tutorial_gui.visible == false:
 		if countTmp == 0:
 			timer.paused = false
@@ -36,6 +36,8 @@ func _process(delta):
 		if player != null:
 			if player.health > 0:
 				player.velocidad = 300
+		await get_tree().create_timer(0.3).timeout
+		TRANSITION.contenedor.stop()
 		gameOver()
 		comprobarWin()
 		$StartTimer.paused = false
@@ -129,7 +131,7 @@ func comprobarWin():
 	print(enemigos.size())
 	if enemigos.size() == 0:
 		if player != null:
-			if player.currentState != 4 && tmp > 4 :
+			if player.currentState != 4 && tmp > 4:
 				$portal.visible = true
 				$portal/CollisionShape2D.disabled = false
 				$portal/AnimatedSprite2D.visible = true

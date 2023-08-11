@@ -19,8 +19,13 @@ func _ready():
 	dialogos1.append("...\nPor cierto ¿Cómo llegaste hasta este bosque?")
 	dialogos1.append("En fin, con" + " X " + "puedes atacar para defenderte de los enemigos.")
 	dialogos2.append("¡Buen Trabajo! pero hay algo que debes saber.")
-	dialogos2.append("Quedarse por mucho tiempo en un solo lugar puede relevar nuestra ubicación D:")
+	dialogos2.append("Quedarse por mucho tiempo en un solo lugar puede revelar nuestra ubicación D:")
 	dialogos2.append("Procura derrotar a todos los enemigos de la zona lo más pronto posible.")
+	dialogos3.append("A cierto, una última cosa. El Rey Catalán tiene dividido su poder de diferentes\n formas.")
+	dialogos3.append("Para hacertelo más simple he usado la fórmula que puedes ver en la esquina\n superior derecha.")
+	dialogos3.append("Es decir, que en cada escena tendrás que encargarte de una forma en la\n que El Rey Catalán ha TRIANGULADO su poder.")
+	dialogos3.append("Cada vez que pases por un escenario te mostraré en que forma de\n triangulación vas :)")
+	
 	
 	match (get_parent().name):
 		"Tutorial_1":

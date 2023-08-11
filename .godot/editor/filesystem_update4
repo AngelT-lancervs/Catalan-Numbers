@@ -1,5 +1,14 @@
 res://Escenas/juego.tscn
 res://Escenas/T1/enemigo.gd
+res://Escenas/T1/Tutorial_1.gd
 res://Escenas/T2/Tutorial_2.tscn
 res://Escenas/T1/Tutorial_1.tscn
-res://Escenas/T2/enemigo.gd
+res://Escenas/T3/Tutorial_3.tscn
+res://Escenas/transition.tscn
+res://Scripts/transition.gd
+res://Escenas/T3/Tutorial_3.gd
+res://Escenas/N4/Nivel_4.tscn
+res://Escenas/N4/Nivel_4.gd
+res://Escenas/personaje.tscn
+res://Scripts/player.gd
+res://Escenas/T2/Tutorial_2.gd

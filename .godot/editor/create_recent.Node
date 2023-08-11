@@ -1,14 +1,14 @@
+Node
+AnimatedSprite2D
+Control
 Timer
 Camera2D
-AnimatedSprite2D
 ColorRect
 AnimationPlayer
 AnimationTree
 Label
 RichTextLabel
-Control
 CanvasLayer
 CollisionShape2D
 Area2D
-Node
 AudioStreamPlayer

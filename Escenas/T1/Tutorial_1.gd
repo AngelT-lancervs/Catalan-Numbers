@@ -32,7 +32,7 @@ func _process(delta):
 	if  $tutorial_gui.visible == false:
 		if countTmp == 0:
 			timer.paused = false
-			countTmp
+			countTmp+=1
 		if player != null:
 			if player.health > 0:
 				player.velocidad = 300
@@ -129,7 +129,7 @@ func comprobarWin():
 	print(enemigos.size())
 	if enemigos.size() == 0:
 		if player != null:
-			if player.currentState != 4:
+			if player.currentState != 4 && tmp > 4:
 				$portal.visible = true
 				$portal/CollisionShape2D.disabled = false
 				$portal/AnimatedSprite2D.visible = true
@@ -138,8 +138,9 @@ func comprobarWin():
 				timerLabel.text = "DONE!"
 				
 
+
 func _on_portal_body_entered(body):
 	if body != null && !(body is Enemigo):
 		TRANSITION.changeEscena(siguiente_escena)
 		print("win")
-		
+

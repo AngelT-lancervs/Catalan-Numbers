@@ -18,7 +18,7 @@ var direccionY := 0.0
 @onready var isIdle : bool = $AnimationTree.get("parameters/conditions/isIdle")
 @onready var isAttacking : bool = $AnimationTree.get("parameters/conditions/isAttacking")
 @onready var isHurt : bool = $AnimationTree.get("parameters/conditions/isHurt")
-
+var kills = 0
 @onready var animation : AnimationNodeStateMachinePlayback = $AnimationTree.get("parameters/playback")
 @onready var swordCollider = $swordHitBox/swordCollider
 @onready var bodyCollider = $hitbox/CollisionPolygon2D
@@ -86,6 +86,8 @@ func _on_hitbox_body_entered(body):
 			damage_player(body.damage)
 			body.queue_free()
 			hurt()
+			if health != 0:
+				kills +=1
 		
 func correr():
 	animation.travel("run")
@@ -121,6 +123,7 @@ func _on_sword_hit_box_body_entered(body):
 			enem.hitboxGlobal.disabled = true
 			enem.collision.disabled = true
 			enem.area2d.disabled = true
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(1.5).timeout
 			if body != null:
+				kills += 1
 				body.free()

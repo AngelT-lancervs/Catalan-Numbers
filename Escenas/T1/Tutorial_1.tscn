@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Escenas/T1/Tutorial_1.gd" id="1_mho7d"]
 [ext_resource type="AudioStream" uid="uid://batlndsv6twai" path="res://Assets/sounds/bosque.wav" id="3_w7b7q"]
-[ext_resource type="PackedScene" uid="uid://1u2er22w1tvk" path="res://Escenas/T3/GameOver.tscn" id="4_730pm"]
+[ext_resource type="PackedScene" uid="uid://1u2er22w1tvk" path="res://Escenas/GameOver.tscn" id="4_730pm"]
 [ext_resource type="PackedScene" uid="uid://gyg3l6r5h25b" path="res://Escenas/T3/tile_map.tscn" id="5_66lbo"]
 [ext_resource type="Texture2D" uid="uid://0o67p58te0fy" path="res://Assets/Free Pixel Effects Pack/17_felspell_spritesheet.png" id="6_vgcr1"]
 [ext_resource type="PackedScene" uid="uid://bj3qd45iobklu" path="res://Escenas/personaje.tscn" id="7_i74f2"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://fjoh0rcrhl8w" path="res://Escenas/tutorial_gui.tscn" id="9_cbpu3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_23ywh"]
-radius = 194.0
+radius = 153.209
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6ska"]
 atlas = ExtResource("6_vgcr1")
@@ -677,7 +677,7 @@ layer_1/tile_data = PackedInt32Array(1245187, 524289, 1, 1245188, 524289, 1, 117
 
 [node name="portal" type="Area2D" parent="."]
 visible = false
-position = Vector2(729, 153)
+position = Vector2(741, 61)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
@@ -685,7 +685,6 @@ shape = SubResource("CircleShape2D_23ywh")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="portal"]
-visible = false
 position = Vector2(-8.00002, 8)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ilyhm")
