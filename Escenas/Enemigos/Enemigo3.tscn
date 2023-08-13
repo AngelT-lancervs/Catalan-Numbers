@@ -1,0 +1,139 @@
+[gd_scene load_steps=22 format=3 uid="uid://dnulhkntjl5ce"]
+
+[ext_resource type="Script" path="res://Escenas/Enemigos/Enemigo3.gd" id="1_icdu2"]
+[ext_resource type="Texture2D" uid="uid://m5rreerdf7fo" path="res://Assets/Characters/Animated insect enemy assets/MantisMove.png" id="2_djiia"]
+[ext_resource type="Texture2D" uid="uid://dgv3gwgcpcpsc" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_01.png" id="2_vtuot"]
+[ext_resource type="Texture2D" uid="uid://cdm1rqoeuibhb" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_02.png" id="3_kgrqc"]
+[ext_resource type="Texture2D" uid="uid://ce2jx0vh2djaj" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_03.png" id="4_y2kbe"]
+[ext_resource type="Texture2D" uid="uid://bbhbvvel4qruq" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_04.png" id="5_p0hvg"]
+[ext_resource type="Texture2D" uid="uid://ljf8aur5l1up" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_05.png" id="6_jiw67"]
+[ext_resource type="Texture2D" uid="uid://86nmrefg064i" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_06.png" id="7_nr0dd"]
+[ext_resource type="Texture2D" uid="uid://cxdr436di4rcm" path="res://Assets/SFX400_nyknck/SFX401_nyknck/SFX401_07.png" id="8_wr20h"]
+[ext_resource type="Texture2D" uid="uid://xhimlf4djuj0" path="res://Dark VFX 2 (48x64).png" id="9_qxin1"]
+[ext_resource type="AudioStream" uid="uid://dnyxqbkqn28xf" path="res://Assets/sounds/mantis.mp3" id="11_fq7a1"]
+[ext_resource type="AudioStream" uid="uid://yqae8lifpki8" path="res://Assets/sounds/mantisdie.mp3" id="12_fm28b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01rpl"]
+atlas = ExtResource("9_qxin1")
+region = Rect2(720, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw1ju"]
+atlas = ExtResource("2_djiia")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttvg5"]
+atlas = ExtResource("2_djiia")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64kx3"]
+atlas = ExtResource("2_djiia")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7gwb"]
+atlas = ExtResource("2_djiia")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3fit5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vtuot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kgrqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y2kbe")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_p0hvg")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_jiw67")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_nr0dd")
+}, {
+"duration": 1.4,
+"texture": ExtResource("8_wr20h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01rpl")
+}],
+"loop": false,
+"name": &"die",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw1ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttvg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64kx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7gwb")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_588kj"]
+size = Vector2(26, 25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5nhq"]
+radius = 57.0088
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48046"]
+size = Vector2(28, 28)
+
+[node name="Enemigo3" type="CharacterBody2D"]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_icdu2")
+damage = 25
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3fit5")
+animation = &"die"
+frame = 6
+frame_progress = 1.0
+
+[node name="hitboxGlobal" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_588kj")
+
+[node name="deteccion" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deteccion"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_v5nhq")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_48046")
+
+[node name="CambiarDireccion" type="Timer" parent="."]
+autostart = true
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="aparecer" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("11_fq7a1")
+
+[node name="die" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("12_fm28b")
+
+[connection signal="body_entered" from="deteccion" to="." method="_on_deteccion_body_entered"]
+[connection signal="body_exited" from="deteccion" to="." method="_on_deteccion_body_exited"]
+[connection signal="timeout" from="CambiarDireccion" to="." method="_on_cambiar_direccion_timeout"]

@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4ges7klyyxf4"]
+
+[ext_resource type="Texture2D" uid="uid://d1ff6ttl1wxj4" path="res://Assets/UI/Free Paper UI System/1 Sprites/Book Desk/7.png" id="1_4aams"]
+[ext_resource type="AudioStream" uid="uid://b4vvu4qaj2q4x" path="res://Assets/sounds/outro.mp3" id="2_nls3x"]
+[ext_resource type="Texture2D" uid="uid://ckw8cjbyagsp2" path="res://Assets/Characters/fairy/fairy_1.png" id="3_kfg2u"]
+[ext_resource type="Texture2D" uid="uid://cs0fvnc2o7l0" path="res://Assets/Characters/fairy/fairy_2.png" id="4_7xyna"]
+[ext_resource type="Texture2D" uid="uid://cda7k5dgvu167" path="res://Assets/Characters/fairy/fairy_3.png" id="5_52qnk"]
+[ext_resource type="Texture2D" uid="uid://dg3prha8aa8he" path="res://Assets/Characters/fairy/fairy_4.png" id="6_kjqq8"]
+[ext_resource type="Texture2D" uid="uid://bl5fhv3p7rf6g" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/5 Holders/3.png" id="7_sfpqc"]
+
+[sub_resource type="GDScript" id="GDScript_rkv0n"]
+script/source = "extends Node
+
+var array : Array[String]
+var isText = false
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$fairy.play(\"default\")
+	array.append(\"GRACIAS A TI CATALAN RECUPERÓ SU PODER Y AHORA PODRÁ TRIANGULAR 
+MÁS POLÍGONOS.
+
+ESTA SECCIÓN ES SIMPLEMENTE PARA AGRADECERTE EL TIEMPO QUE NOS 
+PRESTASTE PARA  PROBAR ESTE JUEGO QUE ES NUESTRO PROYECTO DE 
+MATEMÁTICAS DISCRETAS :)\")
+
+	array.append(\"PARTICIPANTES DEL PROYECTO:
+
+Tomalá Moreno Angel Alexander
+Mawyin Cabay Jorge Daniel
+Pasaca Paladines Noelia Alexandra
+Villacreses Lara Geovanny Daniel\")
+
+	array.append(\"CRÉDITOS DE LAS IMÁGENES EXTERNAS USADAS:
+Beast Pixels :  https://beast-pixels.itch.io
+Cheshire: https://jeevo.itch.io/
+SciGho: https://ninjikin.itch.io/
+LuizMelo: https://luizmelo.itch.io/
+Chierit: https://chierit.itch.io/
+Sven: https://sventhole.itch.io/
+
+Al no ser un proyecto comercializable, no se infrijen las los términos
+de uso\")
+
+	array.append(\"CRÉDITOS DE LAS MÚSICAS EXTERNAS USADAS:
+https://www.youtube.com/@cyaniblue5127 : Tema del jefe y victoria
+Christopher Gabriel Esquivel Molina : Tema principal
+Toby Fox : Tema de los créditos
+\")
+
+	array.append(\"       
+	
+	
+	Gracias jugador :)   
+	
+	\")
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Input.is_action_just_pressed(\"z\") and !isText:
+		ponerText()
+
+func ponerText():
+	if array.size() > 0:
+		$Label.text = \"\"
+		for i in array[0]:
+			isText = true
+			$Label.text += i
+			await get_tree().create_timer(0.01).timeout
+		isText = false
+		array.remove_at(0)
+	else:
+		get_tree().quit()
+
+
+func _on_ost_finished():
+	$ost.play()
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qsfr"]
+font_size = 36
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3kt3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kfg2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7xyna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_52qnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kjqq8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_653ri"]
+font_size = 53
+font_color = Color(0.258824, 0.407843, 0.219608, 1)
+
+[node name="Creditos" type="Node"]
+script = SubResource("GDScript_rkv0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(699, 370.5)
+scale = Vector2(1.82292, 1.39464)
+texture = ExtResource("1_4aams")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 127.0
+offset_right = 1357.0
+offset_bottom = 599.0
+label_settings = SubResource("LabelSettings_8qsfr")
+
+[node name="ost" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nls3x")
+autoplay = true
+
+[node name="fairy" type="AnimatedSprite2D" parent="."]
+position = Vector2(715, 61)
+scale = Vector2(6.25, 6.1875)
+sprite_frames = SubResource("SpriteFrames_o3kt3")
+frame_progress = 0.895597
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(1295, 614)
+scale = Vector2(1.951, 2)
+texture = ExtResource("7_sfpqc")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1250.0
+offset_top = 577.0
+offset_right = 1344.0
+offset_bottom = 659.0
+text = "Z"
+label_settings = SubResource("LabelSettings_653ri")
+horizontal_alignment = 1
+
+[connection signal="finished" from="ost" to="." method="_on_ost_finished"]

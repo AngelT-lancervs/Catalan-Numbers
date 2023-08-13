@@ -16,6 +16,7 @@ var animacionInicial = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	numActualCatalan.text = "= 1"
 	new_game()
 	add_child(enemy.instantiate())
 	timer.paused = true
@@ -29,19 +30,21 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	progressBar()
+	if $Sound/win.playing:
+		await get_tree().create_timer(1).timeout
 	if  $tutorial_gui.visible == false:
 		if countTmp == 0:
 			timer.paused = false
+			$MobTimer.paused = false
 			countTmp+=1
 		if player != null:
 			if player.health > 0:
 				player.velocidad = 300
 		await get_tree().create_timer(0.3).timeout
-		TRANSITION.contenedor.stop()
+
 		gameOver()
 		comprobarWin()
 		$StartTimer.paused = false
-		$MobTimer.paused = false
 		if timerLabel.text != "DONE!":
 			var timeleft : float = timer.time_left 
 			timerLabel.text = str(timeleft).pad_decimals(0)
@@ -69,6 +72,7 @@ func _on_mob_timer_timeout():
 		var mob = enemy.instantiate()
 		mob.position.x = randi_range(64, 1300)
 		mob.position.y = randi_range(64,580)
+
 		mob.scale.x = 3.5
 		mob.scale.y = 3.5
 		tmp += 1
@@ -90,8 +94,11 @@ func gameOver():
 				player.queue_free()
 				$GUI.visible = false
 				$GameOver.visible = true
+				$MobTimer.paused = true
 				tmp = 999
 				clear_enemies()
+				$Sound/ost.stop()
+				$GameOver.sonidoGameOver.play()
 				return true
 				
 		if timer.time_left == 0:
@@ -99,13 +106,16 @@ func gameOver():
 				player.free()
 				$GUI.visible = false
 				$GameOver.visible = true
-				$MobTimer.stop()
+				$MobTimer.paused = true
 				clear_enemies()
+				$Sound/ost.stop()
+				$GameOver.sonidoGameOver.play()
 				return true
 		
 func progressBar():
 	if player != null:
 		$GUI/TextureProgressBar.value = $player.health
+		player.health += 0.1
 		if player.health == 0:
 			$GUI/TextureProgressBar/HeartsRed1.visible = false
 
@@ -138,10 +148,13 @@ func comprobarWin():
 				$portal/AnimatedSprite2D.play("idle")
 				timer.paused = true
 				timerLabel.text = "DONE!"
+				$Sound/ost.stop()
+				$Sound/win.play()
 				
 
 func _on_portal_body_entered(body):
 	if body != null && !(body is Enemigo):
 		TRANSITION.changeEscena(siguiente_escena)
-		print("win")
-		
+
+func _on_ost_finished():
+	$Sound/ost.play()

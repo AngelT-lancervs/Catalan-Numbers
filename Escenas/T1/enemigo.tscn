@@ -1,10 +1,12 @@
-[gd_scene load_steps=67 format=3 uid="uid://d0laegdixmkyt"]
+[gd_scene load_steps=69 format=3 uid="uid://d0laegdixmkyt"]
 
 [ext_resource type="Texture2D" uid="uid://78mxgx00yn8" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Attack.png" id="1_8unbd"]
 [ext_resource type="Script" path="res://Escenas/T1/enemigo.gd" id="1_hv201"]
 [ext_resource type="Texture2D" uid="uid://kii24iygjpt" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Dead.png" id="2_ewru1"]
 [ext_resource type="Texture2D" uid="uid://bvhl2cxefqs3j" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Idle.png" id="2_ttyba"]
 [ext_resource type="Texture2D" uid="uid://b30qwn1h77pr6" path="res://Assets/Characters/Skeleton/Sprite Sheets/Skeleton Walk.png" id="3_5560s"]
+[ext_resource type="AudioStream" uid="uid://bo133k3mn1hrj" path="res://Assets/sounds/bones-2-88481.mp3" id="6_glpxa"]
+[ext_resource type="AudioStream" uid="uid://d3ds2bigi3hp5" path="res://Assets/sounds/bone-crack-121580.mp3" id="7_lck7l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hmd4p"]
 atlas = ExtResource("1_8unbd")
@@ -450,6 +452,8 @@ position = Vector2(2, 4)
 scale = Vector2(0.833333, 0.75)
 sprite_frames = SubResource("SpriteFrames_6t7n0")
 animation = &"die"
+frame = 15
+frame_progress = 1.0
 
 [node name="hitboxGlobal" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
@@ -474,6 +478,14 @@ shape = SubResource("RectangleShape2D_p7d0j")
 [node name="CambiarDireccion" type="Timer" parent="."]
 autostart = true
 
-[connection signal="body_entered" from="deteccion" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="deteccion" to="." method="_on_area_2d_body_exited"]
+[node name="Sounds" type="Node" parent="."]
+
+[node name="aparecer" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_glpxa")
+
+[node name="die" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("7_lck7l")
+
+[connection signal="body_entered" from="deteccion" to="." method="_on_deteccion_body_entered"]
+[connection signal="body_exited" from="deteccion" to="." method="_on_deteccion_body_exited"]
 [connection signal="timeout" from="CambiarDireccion" to="." method="_on_cambiar_direccion_timeout"]

@@ -1,0 +1,286 @@
+[gd_scene load_steps=51 format=3 uid="uid://dkry0g11lpasd"]
+
+[ext_resource type="Script" path="res://MenuPrincipal.gd" id="1_feyel"]
+[ext_resource type="Texture2D" uid="uid://cwhowccaxhre8" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Folding & Cutout/9 Calender/1.png" id="2_4xdld"]
+[ext_resource type="Texture2D" uid="uid://dhubepn4e5je7" path="res://Assets/UI/Free Paper UI System/1 Sprites/Book Desk/4.png" id="3_erhdr"]
+[ext_resource type="Texture2D" uid="uid://dyl4rfhk0vuwm" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/1.png" id="4_2tk5r"]
+[ext_resource type="Texture2D" uid="uid://dqyx2lxhpv6ky" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/5.png" id="5_1s11v"]
+[ext_resource type="Texture2D" uid="uid://b01pncjda1tgq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/2.png" id="6_dkt1i"]
+[ext_resource type="Texture2D" uid="uid://bsw431r8oivqt" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/2.png" id="6_vfnhp"]
+[ext_resource type="Texture2D" uid="uid://kgksygikml7u" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/4.png" id="7_gkic7"]
+[ext_resource type="Texture2D" uid="uid://5gdlacetj73a" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/3.png" id="7_x313q"]
+[ext_resource type="Texture2D" uid="uid://upmimgvnkug0" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/4.png" id="8_p0sc7"]
+[ext_resource type="Texture2D" uid="uid://4bt5djijxy4k" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/5.png" id="9_p64q8"]
+[ext_resource type="Texture2D" uid="uid://bby0xxi7xh0b7" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/6.png" id="10_tcub2"]
+[ext_resource type="Texture2D" uid="uid://c0pddoc7myp1k" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/7.png" id="11_27uas"]
+[ext_resource type="Texture2D" uid="uid://cph2ja16kwwdd" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/8.png" id="12_aqafd"]
+[ext_resource type="Texture2D" uid="uid://bcvvq0iuir4pu" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/9.png" id="13_eeodb"]
+[ext_resource type="Texture2D" uid="uid://d04ps5kod5ps3" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/2 Day/10.png" id="14_kjvsn"]
+[ext_resource type="Texture2D" uid="uid://225xysdmnr1b" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/1.png" id="15_aa7xi"]
+[ext_resource type="Texture2D" uid="uid://bphuaix014ehx" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/2.png" id="16_138hl"]
+[ext_resource type="Texture2D" uid="uid://c4q3tsnxhk4d4" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/3.png" id="17_j4fun"]
+[ext_resource type="Texture2D" uid="uid://caxjsdts0qktl" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/5.png" id="19_40lmd"]
+[ext_resource type="Texture2D" uid="uid://8hcl65pm2bg3" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/6.png" id="20_btwn7"]
+[ext_resource type="Texture2D" uid="uid://beqy62156hsu7" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/7.png" id="21_b4gsa"]
+[ext_resource type="Texture2D" uid="uid://pbkmxbbe8ucy" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/8.png" id="22_chjvt"]
+[ext_resource type="Texture2D" uid="uid://c6i23cinh5nuq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/9.png" id="23_6mjyg"]
+[ext_resource type="Texture2D" uid="uid://cdrbew754m1sq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/4 Night/10.png" id="24_v6jwg"]
+[ext_resource type="Texture2D" uid="uid://cyddi42cqvlha" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/1.png" id="25_crtec"]
+[ext_resource type="Texture2D" uid="uid://442i7mb7atar" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/2.png" id="26_f6nl0"]
+[ext_resource type="Texture2D" uid="uid://ok3x2xedu0wm" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/3.png" id="27_h14eu"]
+[ext_resource type="Texture2D" uid="uid://7vjh60ilpbo3" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/4.png" id="28_yoqdd"]
+[ext_resource type="Texture2D" uid="uid://clxcihau46cvb" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/6.png" id="30_v7trm"]
+[ext_resource type="Texture2D" uid="uid://v5ftcbytm8i7" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/7.png" id="31_umfsc"]
+[ext_resource type="Texture2D" uid="uid://cecb0nd4icunv" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/8.png" id="32_bwskf"]
+[ext_resource type="Texture2D" uid="uid://g8wye6iij32n" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/9.png" id="33_jolpj"]
+[ext_resource type="Texture2D" uid="uid://bbcfshmq7uiad" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/3 Noon/10.png" id="34_wj7dn"]
+[ext_resource type="Texture2D" uid="uid://cjueva3iik7nh" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/1.png" id="35_rw0xd"]
+[ext_resource type="Texture2D" uid="uid://4s36veqcxhgy" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/3.png" id="37_ripko"]
+[ext_resource type="Texture2D" uid="uid://bsfklgxkrua1y" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/4.png" id="38_isacj"]
+[ext_resource type="Texture2D" uid="uid://bv6jd03fsqlfj" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/5.png" id="39_podry"]
+[ext_resource type="Texture2D" uid="uid://bmryfdvwwdn45" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/6.png" id="40_gr2l0"]
+[ext_resource type="Texture2D" uid="uid://dabkosaxfab2n" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/7.png" id="41_t60ns"]
+[ext_resource type="Texture2D" uid="uid://d2ca71o7hkp8j" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/8.png" id="42_7uu1k"]
+[ext_resource type="Texture2D" uid="uid://h72mwwrahoxl" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/9.png" id="43_qollt"]
+[ext_resource type="Texture2D" uid="uid://hy4b1qbaycge" path="res://Assets/UI/Free Paper UI System/1 Sprites/Day & Night Cycle/Items Holder/1/7 Raining/10.png" id="44_np8u0"]
+[ext_resource type="Texture2D" uid="uid://cf7v662kdddu6" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Folding & Cutout/2 Headers/4.png" id="45_4pnvi"]
+[ext_resource type="Texture2D" uid="uid://dp271qgrgsr1k" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/1 Items/1.png" id="45_gwowf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjmc3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2tk5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vfnhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x313q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p0sc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p64q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tcub2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_27uas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_aqafd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eeodb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kjvsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kb00b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_aa7xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_138hl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j4fun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gkic7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_40lmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_btwn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b4gsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_chjvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6mjyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_v6jwg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tuyur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_crtec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_f6nl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_h14eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yoqdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1s11v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_v7trm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_umfsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bwskf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jolpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_wj7dn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ufcf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_rw0xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dkt1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ripko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_isacj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_podry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_gr2l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_t60ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7uu1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qollt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_np8u0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7v7u"]
+font_size = 42
+font_color = Color(0.407843, 0.337255, 0.439216, 1)
+shadow_size = 4
+shadow_color = Color(0.407843, 0.337255, 0.439216, 0.301961)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_feyel")
+
+[node name="fondo" type="Sprite2D" parent="."]
+position = Vector2(692.5, 370)
+scale = Vector2(2.60179, 1.75926)
+texture = ExtResource("2_4xdld")
+
+[node name="contenedor" type="Sprite2D" parent="."]
+position = Vector2(693, 359)
+scale = Vector2(1.24609, 1.08036)
+texture = ExtResource("3_erhdr")
+
+[node name="sol" type="AnimatedSprite2D" parent="."]
+position = Vector2(81, 94)
+scale = Vector2(1.27083, 1.25)
+sprite_frames = SubResource("SpriteFrames_pjmc3")
+frame_progress = 0.395111
+
+[node name="noche" type="AnimatedSprite2D" parent="."]
+position = Vector2(1288, 100)
+scale = Vector2(1.3125, 1.21875)
+sprite_frames = SubResource("SpriteFrames_kb00b")
+frame_progress = 0.472925
+
+[node name="atardecer" type="AnimatedSprite2D" parent="."]
+position = Vector2(103, 625)
+scale = Vector2(1.26042, 1.20833)
+sprite_frames = SubResource("SpriteFrames_tuyur")
+
+[node name="lluvia" type="AnimatedSprite2D" parent="."]
+position = Vector2(1290, 633)
+scale = Vector2(1.22917, 1.22917)
+sprite_frames = SubResource("SpriteFrames_4ufcf")
+
+[node name="Nombre" type="Sprite2D" parent="."]
+position = Vector2(695, 104)
+scale = Vector2(2.48772, 1.45982)
+texture = ExtResource("45_4pnvi")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 421.0
+offset_top = 66.0
+offset_right = 921.0
+offset_bottom = 127.0
+text = "CATALAN KNIGHT"
+label_settings = SubResource("LabelSettings_u7v7u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="empezar" type="Button" parent="."]
+process_priority = 3
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 352.0
+offset_top = -545.0
+offset_right = -438.0
+offset_bottom = -430.0
+grow_horizontal = 2
+grow_vertical = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "                                               COMENZAR JUEGO
+"
+icon = ExtResource("45_gwowf")
+alignment = 0
+clip_text = true
+expand_icon = true
+text_direction = 1
+
+[connection signal="pressed" from="empezar" to="." method="_on_empezar_pressed"]

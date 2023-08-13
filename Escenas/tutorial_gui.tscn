@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://fjoh0rcrhl8w"]
+[gd_scene load_steps=55 format=3 uid="uid://fjoh0rcrhl8w"]
 
 [ext_resource type="Script" path="res://Escenas/tutorial_gui.gd" id="1_4q7hf"]
 [ext_resource type="Texture2D" uid="uid://sdftq6ti7w5" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Paper Content Appear Animation/Plain/7 Dialogue Box/1.png" id="1_qwwbw"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://cs0fvnc2o7l0" path="res://Assets/Characters/fairy/fairy_2.png" id="47_ftep1"]
 [ext_resource type="Texture2D" uid="uid://cda7k5dgvu167" path="res://Assets/Characters/fairy/fairy_3.png" id="48_yl1pc"]
 [ext_resource type="Texture2D" uid="uid://dg3prha8aa8he" path="res://Assets/Characters/fairy/fairy_4.png" id="49_36jar"]
+[ext_resource type="Texture2D" uid="uid://bp7bg7nj11jid" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/4 Buttons/2.png" id="50_b7fvq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2s6ix"]
 animations = [{
@@ -215,6 +216,9 @@ animations = [{
 "speed": 11.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_fostf"]
+font_size = 32
+
 [node name="tutorial_gui" type="CanvasLayer"]
 script = ExtResource("1_4q7hf")
 
@@ -255,3 +259,16 @@ label_settings = SubResource("LabelSettings_gv6vl")
 position = Vector2(99, 518)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_y6nfp")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(1287, 627)
+scale = Vector2(5.375, 5.5625)
+texture = ExtResource("50_b7fvq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1273.0
+offset_top = 604.0
+offset_right = 1322.0
+offset_bottom = 652.0
+text = "Z"
+label_settings = SubResource("LabelSettings_fostf")

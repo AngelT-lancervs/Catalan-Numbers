@@ -1,10 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmwghd74x2lh0"]
+[gd_scene load_steps=20 format=3 uid="uid://bmwghd74x2lh0"]
 
 [ext_resource type="Texture2D" uid="uid://n6ltpnnft728" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Folding & Cutout/1 Paper/31.png" id="1_hswwg"]
 [ext_resource type="Texture2D" uid="uid://cf7v662kdddu6" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Folding & Cutout/2 Headers/4.png" id="2_eqo1y"]
 [ext_resource type="Texture2D" uid="uid://g0w65y4ui7av" path="res://Assets/UI/Retro Inventory/Original/Health_01.png" id="3_ij3he"]
 [ext_resource type="Texture2D" uid="uid://c875fchch5103" path="res://Assets/UI/Retro Inventory/Original/Health_01_Bar01.png" id="4_icwdj"]
 [ext_resource type="Texture2D" uid="uid://cp6js4tsm4oev" path="res://Assets/UI/Retro Inventory/Original/Hearts_Red_1.png" id="5_t0spl"]
+[ext_resource type="Texture2D" uid="uid://bsokhhm3k7ncf" path="res://Assets/UI/Retro Inventory/Original/Health_03.png" id="6_s7a3c"]
+[ext_resource type="Texture2D" uid="uid://8s18vq1frapn" path="res://Assets/UI/Retro Inventory/Original/Health_03_Bar03.png" id="7_013qp"]
+[ext_resource type="Texture2D" uid="uid://rxfnjwvvx362" path="res://Assets/preguntas/cuadrado.png" id="8_jb2of"]
+[ext_resource type="Texture2D" uid="uid://dgwemqhmbjilb" path="res://Assets/preguntas/penta1.png" id="9_hb835"]
+[ext_resource type="Texture2D" uid="uid://4uxfrxsmdf7k" path="res://Assets/preguntas/penta2.png" id="10_8ex6q"]
+[ext_resource type="Texture2D" uid="uid://clvjpb43524e5" path="res://Assets/preguntas/penta3.png" id="11_yxnu3"]
+[ext_resource type="Texture2D" uid="uid://dlnlanh03px2" path="res://Assets/preguntas/penta4.png" id="12_sdit1"]
+[ext_resource type="Texture2D" uid="uid://wsxh8pu3a5e0" path="res://Assets/preguntas/penta5.png" id="13_ki3pp"]
+[ext_resource type="Texture2D" uid="uid://cp1offfyrxfnw" path="res://Assets/preguntas/catalan.png" id="14_ea8ny"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ssp7c"]
 font_size = 27
@@ -17,6 +26,9 @@ font_color = Color(0.509804, 0.266667, 0.254902, 1)
 font_size = 22
 font_color = Color(0.509804, 0.266667, 0.254902, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_3mwpk"]
+font_color = Color(0.509804, 0.266667, 0.254902, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_pioor"]
 font_size = 70
 font_color = Color(0.509804, 0.266667, 0.254902, 1)
@@ -26,6 +38,7 @@ shadow_color = Color(0.760784, 0.603922, 0.764706, 0)
 [node name="GUI" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchor_left = 0.428
 anchor_right = 0.568
@@ -42,54 +55,63 @@ texture = ExtResource("1_hswwg")
 
 [node name="C" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 450.0
-offset_top = 36.0
-offset_right = 588.0
-offset_bottom = 94.0
-text = "C  =     (2n)!"
+offset_left = 446.0
+offset_top = 13.0
+offset_right = 584.0
+offset_bottom = 71.0
+text = "C    =     (2n)!"
 label_settings = SubResource("LabelSettings_ssp7c")
 
 [node name="C2" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 474.0
-offset_top = 68.0
-offset_right = 612.0
-offset_bottom = 126.0
+offset_left = 484.0
+offset_top = 44.0
+offset_right = 622.0
+offset_bottom = 102.0
 text = "      (n+1)!n!"
 label_settings = SubResource("LabelSettings_ssp7c")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
-offset_left = 506.0
-offset_top = 68.0
-offset_right = 618.0
-offset_bottom = 71.0
+offset_left = 512.0
+offset_top = 45.0
+offset_right = 624.0
+offset_bottom = 48.0
 color = Color(0.509804, 0.266667, 0.254902, 1)
 
 [node name="n_minus" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 466.0
-offset_top = 52.0
-offset_right = 482.0
-offset_bottom = 78.0
-text = "1
+offset_left = 454.0
+offset_top = 35.0
+offset_right = 483.0
+offset_bottom = 61.0
+text = "n+2
 "
 label_settings = SubResource("LabelSettings_7fmlo")
 
-[node name="contenedorLabel" type="Sprite2D" parent="Control"]
-position = Vector2(13.0001, 40)
-scale = Vector2(1, 1.35714)
-texture = ExtResource("2_eqo1y")
-
 [node name="numCatalanActual" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 623.0
-offset_top = 53.0
-offset_right = 655.0
-offset_bottom = 87.0
+offset_left = 631.0
+offset_top = 26.0
+offset_right = 663.0
+offset_bottom = 60.0
 text = "= 1
 "
 label_settings = SubResource("LabelSettings_rliw7")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 92.0
+offset_right = 665.0
+offset_bottom = 118.0
+text = "n + 2 = número de lados actual"
+label_settings = SubResource("LabelSettings_3mwpk")
+
+[node name="contenedorLabel" type="Sprite2D" parent="."]
+position = Vector2(696, 40)
+scale = Vector2(1, 1.35714)
+texture = ExtResource("2_eqo1y")
 
 [node name="TimerLabel" type="Label" parent="."]
 anchors_preset = 5
@@ -115,3 +137,87 @@ texture_progress = ExtResource("4_icwdj")
 position = Vector2(10, 8)
 texture = ExtResource("5_t0spl")
 metadata/_edit_group_ = true
+
+[node name="barraBoss" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = 382.0
+offset_top = -23.0
+offset_right = 539.0
+offset_bottom = 7.0
+scale = Vector2(4, 4)
+max_value = 1000.0
+step = 0.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_s7a3c")
+texture_progress = ExtResource("7_013qp")
+tint_under = Color(1, 0.384314, 0.298039, 1)
+tint_over = Color(0.941176, 0.839216, 1, 1)
+tint_progress = Color(0, 0.988235, 0.941176, 1)
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D"]
+position = Vector2(1237.5, 83)
+rotation = -1.57079
+scale = Vector2(3, 3)
+texture = ExtResource("8_jb2of")
+hframes = 4
+vframes = 4
+frame = 13
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node2D"]
+position = Vector2(1148.5, 82)
+rotation = -1.57079
+scale = Vector2(3, 3)
+texture = ExtResource("8_jb2of")
+flip_h = true
+flip_v = true
+hframes = 4
+vframes = 4
+frame = 13
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D"]
+position = Vector2(1074.5, 130)
+scale = Vector2(2.46874, 2.46875)
+texture = ExtResource("9_hb835")
+hframes = 5
+vframes = 5
+frame = 20
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D"]
+position = Vector2(1129.5, 129)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("10_8ex6q")
+hframes = 6
+vframes = 6
+frame = 30
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D"]
+position = Vector2(1190.5, 131)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("11_yxnu3")
+hframes = 5
+vframes = 6
+frame = 27
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D"]
+position = Vector2(1245.5, 139)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("12_sdit1")
+hframes = 5
+vframes = 6
+frame = 29
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node2D"]
+position = Vector2(1308.5, 126)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("13_ki3pp")
+hframes = 5
+vframes = 6
+frame = 25
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(1195.5, 42)
+scale = Vector2(2.65625, 3.1875)
+texture = ExtResource("14_ea8ny")

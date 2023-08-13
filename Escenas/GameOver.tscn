@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://1u2er22w1tvk"]
+[gd_scene load_steps=6 format=3 uid="uid://1u2er22w1tvk"]
 
 [ext_resource type="Script" path="res://Scripts/GameOver.gd" id="1_kj7me"]
+[ext_resource type="AudioStream" uid="uid://bfcvfuwxnkvrr" path="res://Assets/sounds/gameover.mp3" id="2_bfhn7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m1rx"]
 bg_color = Color(0, 0, 0, 0.411765)
@@ -67,3 +68,8 @@ text = "
 HAZ CLICK PARA REINTENTAR
 "
 horizontal_alignment = 1
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="gameOver" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("2_bfhn7")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://dly0bpc4jqlcw"]
+[gd_scene load_steps=103 format=3 uid="uid://dly0bpc4jqlcw"]
 
 [ext_resource type="Script" path="res://Escenas/T3/Tutorial_3.gd" id="1_2p27i"]
 [ext_resource type="PackedScene" uid="uid://1u2er22w1tvk" path="res://Escenas/GameOver.tscn" id="1_vuy3q"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bj3qd45iobklu" path="res://Escenas/personaje.tscn" id="4_8xl07"]
 [ext_resource type="PackedScene" uid="uid://bmwghd74x2lh0" path="res://Escenas/gui.tscn" id="5_h2tv2"]
 [ext_resource type="PackedScene" uid="uid://fjoh0rcrhl8w" path="res://Escenas/tutorial_gui.tscn" id="6_vtl67"]
+[ext_resource type="AudioStream" uid="uid://batlndsv6twai" path="res://Assets/sounds/bosque.wav" id="8_hwifg"]
+[ext_resource type="AudioStream" uid="uid://babl5s2mx0bds" path="res://Assets/sounds/game-level-complete-143022.mp3" id="9_4xt3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ctsnw"]
 radius = 160.0
@@ -699,7 +701,17 @@ wait_time = 40.0
 
 [node name="tutorial_gui" parent="." instance=ExtResource("6_vtl67")]
 
+[node name="Sound" type="Node" parent="."]
+
+[node name="ost" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("8_hwifg")
+autoplay = true
+
+[node name="win" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("9_4xt3g")
+
 [connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="finished" from="Sound/ost" to="." method="_on_ost_finished"]

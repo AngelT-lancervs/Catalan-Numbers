@@ -15,6 +15,7 @@ var countTmp = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$GUI/Control.visible = false
 	new_game()
 	add_child(enemy.instantiate())
 	timer.paused = true
@@ -28,7 +29,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	progressBar()
-	
+	if $Sound/win.playing:
+		await get_tree().create_timer(1).timeout
 	if  $tutorial_gui.visible == false:
 		if countTmp == 0:
 			timer.paused = false
@@ -67,6 +69,7 @@ func _on_mob_timer_timeout():
 		var mob = enemy.instantiate()
 		mob.position.x = randi_range(64, 1300)
 		mob.position.y = randi_range(64,580)
+
 		mob.scale.x = 3.5
 		mob.scale.y = 3.5
 		tmp += 1
@@ -90,6 +93,8 @@ func gameOver():
 				$GameOver.visible = true
 				tmp = 999
 				clear_enemies()
+				$Sound/ost.stop()
+				$GameOver.sonidoGameOver.play()
 				return true
 				
 		if timer.time_left == 0:
@@ -99,6 +104,8 @@ func gameOver():
 				$GameOver.visible = true
 				$MobTimer.stop()
 				clear_enemies()
+				$Sound/ost.stop()
+				$GameOver.sonidoGameOver.play()
 				return true
 		
 func progressBar():
@@ -130,16 +137,22 @@ func comprobarWin():
 	if enemigos.size() == 0:
 		if player != null:
 			if player.currentState != 4 && tmp > 4 :
+				$Sound/win.play()
 				$portal.visible = true
 				$portal/CollisionShape2D.disabled = false
 				$portal/AnimatedSprite2D.visible = true
 				$portal/AnimatedSprite2D.play("idle")
 				timer.paused = true
 				timerLabel.text = "DONE!"
+				$Sound/ost.stop()
+				
 				
 
 func _on_portal_body_entered(body):
 	if body != null && !(body is Enemigo):
 		TRANSITION.changeEscena(siguiente_escena)
 		print("win")
-		
+
+func _on_ost_finished():
+	$Sound/ost.play()
+	$Sound/win.stop()

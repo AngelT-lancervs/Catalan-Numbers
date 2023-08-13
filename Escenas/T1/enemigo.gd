@@ -7,13 +7,14 @@ class_name Enemigo
 @onready var area2d = $hitbox/CollisionShape2D
 @onready var timerMove = $CambiarDireccion
 var velocidad := 100
+@onready var sonidoDie = $Sounds/die
 var jugador = null
 @export var damage : int = 20
 var vector = Vector2.ZERO
 
-
 func _ready():
 	sprites.play("walk")
+	$Sounds/aparecer.play()
 	randomize()
 
 func _physics_process(delta):
@@ -35,16 +36,14 @@ func _physics_process(delta):
 		vector.y = -1
 	if position.y <= 30:
 		vector.y = 1
-	
-	
 	move_and_slide()
 
 
-func _on_area_2d_body_entered(body):
+func _on_deteccion_body_entered(body):
 	if body != self && body.get_collision_layer() == 3:
 		jugador = body
 
-func _on_area_2d_body_exited(body):
+func _on_deteccion_body_exited(body):
 	jugador = null
 
 func _on_cambiar_direccion_timeout():

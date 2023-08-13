@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmlmjrgjsi40j"
+path="res://.godot/imported/X2Download.app - (Custom) Natsuki ~ Objection! 2022 - Natsuki_ Ace Attorney (128 kbps).mp3-289208f07ed991090d4a552e5a0985c9.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/X2Download.app - (Custom) Natsuki ~ Objection! 2022 - Natsuki_ Ace Attorney (128 kbps).mp3"
+dest_files=["res://.godot/imported/X2Download.app - (Custom) Natsuki ~ Objection! 2022 - Natsuki_ Ace Attorney (128 kbps).mp3-289208f07ed991090d4a552e5a0985c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
