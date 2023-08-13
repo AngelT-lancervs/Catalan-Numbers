@@ -1,12 +1,12 @@
 [gd_scene load_steps=103 format=3 uid="uid://by5g0nkrhkqvk"]
 
 [ext_resource type="Script" path="res://Escenas/T1/Tutorial_1.gd" id="1_mho7d"]
-[ext_resource type="AudioStream" uid="uid://batlndsv6twai" path="res://Assets/sounds/bosque.wav" id="3_w7b7q"]
 [ext_resource type="PackedScene" uid="uid://1u2er22w1tvk" path="res://Escenas/GameOver.tscn" id="4_730pm"]
 [ext_resource type="PackedScene" uid="uid://gyg3l6r5h25b" path="res://Escenas/T3/tile_map.tscn" id="5_66lbo"]
 [ext_resource type="Texture2D" uid="uid://0o67p58te0fy" path="res://Assets/Free Pixel Effects Pack/17_felspell_spritesheet.png" id="6_vgcr1"]
 [ext_resource type="PackedScene" uid="uid://bj3qd45iobklu" path="res://Escenas/personaje.tscn" id="7_i74f2"]
 [ext_resource type="PackedScene" uid="uid://bmwghd74x2lh0" path="res://Escenas/gui.tscn" id="8_aajb1"]
+[ext_resource type="AudioStream" uid="uid://l51npq6tsg3s" path="res://Assets/sounds/t.mp3" id="8_e75hb"]
 [ext_resource type="PackedScene" uid="uid://fjoh0rcrhl8w" path="res://Escenas/tutorial_gui.tscn" id="9_cbpu3"]
 [ext_resource type="AudioStream" uid="uid://babl5s2mx0bds" path="res://Assets/sounds/game-level-complete-143022.mp3" id="9_gd7co"]
 
@@ -707,7 +707,7 @@ wait_time = 1e+08
 [node name="Sound" type="Node" parent="."]
 
 [node name="ost" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("3_w7b7q")
+stream = ExtResource("8_e75hb")
 autoplay = true
 
 [node name="win" type="AudioStreamPlayer2D" parent="Sound"]

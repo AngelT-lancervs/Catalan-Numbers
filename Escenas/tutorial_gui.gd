@@ -25,7 +25,7 @@ func _ready():
 	dialogos3.append("Y usó su propia fórmula para dividir su esencia en fragmentos >:(")
 	dialogos3.append("Mira la fórmula de arriba.")
 	dialogos3.append("Cuando tengas tiempo, revisala detalladamente.")
-	dialogos3.append("En cada escena tendrás que encargarte de una forma en la\n que El Rey Catalán ha sido TRIANGULADO.")
+	dialogos3.append("En cada escena tendrás que encargarte de una forma en la\n que El Rey Catalan ha sido TRIANGULADO.")
 	dialogos3.append("Y lo ha hecho esparciendo fragmentos en forma de\n polígonos que llevan dentro una imagen con algún lugar del reino.")
 	dialogos3.append("Cada vez que pases por un escenario te mostraré \nel fragmento el cuál estamos recuperando.")
 	dialogos3.append("Eso es todo :)")
@@ -33,7 +33,7 @@ func _ready():
 	dialogos3.append("Si no, presiona Z rápidamente.")
 	dialogos3.append("n es lo que falta para completar el lado del polígono actual.")
 	dialogos3.append("Por ejemplo, un Triángulo tiene 3 lados, n + 2 = 3\n¿Cuanto debería ser n para llegar a 3?")
-	dialogos3.append("¡Exacto! n tiene que ser 1 y el número de Catalán en n = 1 es 1 ;)")
+	dialogos3.append("¡Exacto! n tiene que ser 1 y el número de Catalan en n = 1 es 1 ;)")
 	dialogos3.append("De esa misma forma será para todas las demás formas que tiene su poder.")
 	dialogos3.append("Buena suerte, héroe.")
 	

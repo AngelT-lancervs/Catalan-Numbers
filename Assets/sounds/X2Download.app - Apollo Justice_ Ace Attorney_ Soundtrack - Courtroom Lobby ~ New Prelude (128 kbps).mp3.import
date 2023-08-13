@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jseij338x5u6"
+path="res://.godot/imported/X2Download.app - Apollo Justice_ Ace Attorney_ Soundtrack - Courtroom Lobby ~ New Prelude (128 kbps).mp3-56ef5f4be4f21c56a8e086bd2ea6208b.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/X2Download.app - Apollo Justice_ Ace Attorney_ Soundtrack - Courtroom Lobby ~ New Prelude (128 kbps).mp3"
+dest_files=["res://.godot/imported/X2Download.app - Apollo Justice_ Ace Attorney_ Soundtrack - Courtroom Lobby ~ New Prelude (128 kbps).mp3-56ef5f4be4f21c56a8e086bd2ea6208b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

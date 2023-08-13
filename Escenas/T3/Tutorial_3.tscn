@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bj3qd45iobklu" path="res://Escenas/personaje.tscn" id="4_8xl07"]
 [ext_resource type="PackedScene" uid="uid://bmwghd74x2lh0" path="res://Escenas/gui.tscn" id="5_h2tv2"]
 [ext_resource type="PackedScene" uid="uid://fjoh0rcrhl8w" path="res://Escenas/tutorial_gui.tscn" id="6_vtl67"]
-[ext_resource type="AudioStream" uid="uid://batlndsv6twai" path="res://Assets/sounds/bosque.wav" id="8_hwifg"]
+[ext_resource type="AudioStream" uid="uid://l51npq6tsg3s" path="res://Assets/sounds/t.mp3" id="8_duu8v"]
 [ext_resource type="AudioStream" uid="uid://babl5s2mx0bds" path="res://Assets/sounds/game-level-complete-143022.mp3" id="9_4xt3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ctsnw"]
@@ -704,7 +704,7 @@ wait_time = 40.0
 [node name="Sound" type="Node" parent="."]
 
 [node name="ost" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("8_hwifg")
+stream = ExtResource("8_duu8v")
 autoplay = true
 
 [node name="win" type="AudioStreamPlayer2D" parent="Sound"]

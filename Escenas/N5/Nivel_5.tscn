@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0o67p58te0fy" path="res://Assets/Free Pixel Effects Pack/17_felspell_spritesheet.png" id="4_cbvuj"]
 [ext_resource type="PackedScene" uid="uid://bj3qd45iobklu" path="res://Escenas/personaje.tscn" id="5_krhvi"]
 [ext_resource type="PackedScene" uid="uid://bmwghd74x2lh0" path="res://Escenas/gui.tscn" id="6_fykgr"]
-[ext_resource type="AudioStream" uid="uid://batlndsv6twai" path="res://Assets/sounds/bosque.wav" id="7_2w6vf"]
+[ext_resource type="AudioStream" uid="uid://oen7rj58f1u2" path="res://Assets/sounds/bos.mp3" id="7_p6r07"]
 [ext_resource type="AudioStream" uid="uid://babl5s2mx0bds" path="res://Assets/sounds/game-level-complete-143022.mp3" id="8_ykb2x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y10x3"]
@@ -700,7 +700,7 @@ wait_time = 50.0
 [node name="Sound" type="Node" parent="."]
 
 [node name="ost" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("7_2w6vf")
+stream = ExtResource("7_p6r07")
 autoplay = true
 
 [node name="win" type="AudioStreamPlayer2D" parent="Sound"]

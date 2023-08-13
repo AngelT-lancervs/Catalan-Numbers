@@ -38,7 +38,6 @@ shadow_color = Color(0.760784, 0.603922, 0.764706, 0)
 [node name="GUI" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchor_left = 0.428
 anchor_right = 0.568

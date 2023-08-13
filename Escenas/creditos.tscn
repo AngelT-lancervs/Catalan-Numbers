@@ -45,6 +45,7 @@ de uso\")
 https://www.youtube.com/@cyaniblue5127 : Tema del jefe y victoria
 Christopher Gabriel Esquivel Molina : Tema principal
 Toby Fox : Tema de los créditos
+CapCom: Tema del menú principal
 \")
 
 	array.append(\"       
@@ -68,7 +69,7 @@ func ponerText():
 		isText = false
 		array.remove_at(0)
 	else:
-		get_tree().quit()
+		TRANSITION.changeEscena(\"res://Escenas/MenuPrincipal.tscn\")
 
 
 func _on_ost_finished():

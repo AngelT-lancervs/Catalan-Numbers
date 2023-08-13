@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bj3qd45iobklu" path="res://Escenas/personaje.tscn" id="3_0vqyv"]
 [ext_resource type="Texture2D" uid="uid://0o67p58te0fy" path="res://Assets/Free Pixel Effects Pack/17_felspell_spritesheet.png" id="3_g4f4v"]
 [ext_resource type="PackedScene" uid="uid://bmwghd74x2lh0" path="res://Escenas/gui.tscn" id="4_0kmw3"]
-[ext_resource type="AudioStream" uid="uid://batlndsv6twai" path="res://Assets/sounds/bosque.wav" id="8_6q78d"]
 [ext_resource type="PackedScene" uid="uid://fjoh0rcrhl8w" path="res://Escenas/tutorial_gui.tscn" id="8_b0sw6"]
+[ext_resource type="AudioStream" uid="uid://l51npq6tsg3s" path="res://Assets/sounds/t.mp3" id="8_uc76p"]
 [ext_resource type="AudioStream" uid="uid://babl5s2mx0bds" path="res://Assets/sounds/game-level-complete-143022.mp3" id="9_01t73"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cnf72"]
@@ -704,7 +704,7 @@ autostart = true
 [node name="Sound" type="Node" parent="."]
 
 [node name="ost" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("8_6q78d")
+stream = ExtResource("8_uc76p")
 autoplay = true
 
 [node name="win" type="AudioStreamPlayer2D" parent="Sound"]
