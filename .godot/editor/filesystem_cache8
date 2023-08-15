@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1692071809
+::res://::1692076430
 Dark VFX 2 (48x64).png::CompressedTexture2D::1629301800225040883::1692064381::1692064381::1::::<><>::
 export_presets.cfg::TextFile::-1::1692064381::0::1::::<><>::
 README.md::TextFile::-1::1692064381::0::1::::<><>::
@@ -2459,15 +2459,15 @@ Tutorial_2.tscn::PackedScene::8401354431733054204::1692064396::0::1::::<><>::res
 tile_map.tscn::PackedScene::471093058570152929::1692064381::0::1::::<><>::uid://dx6vjqwkp034<>uid://b72pmt0gogqfy<>uid://lw1ydll22atx<>uid://cus5f30y50dlh<>uid://cvnwes3xu2lyb<>uid://q8cgp4m1lpt6<>uid://c0orubm2kgfsf<>uid://lfkwfyj0hxkh<>uid://omcl5ftklrw7
 Tutorial_3.gd::GDScript::-1::1692064381::0::1::::<>Node<>::
 Tutorial_3.tscn::PackedScene::7982404900078317494::1692064396::0::1::::<><>::res://Escenas/T3/Tutorial_3.gd<>uid://1u2er22w1tvk<>uid://gyg3l6r5h25b<>uid://0o67p58te0fy<>uid://bj3qd45iobklu<>uid://bmwghd74x2lh0<>uid://fjoh0rcrhl8w<>uid://l51npq6tsg3s<>uid://babl5s2mx0bds
-::res://juego2/::1692071774
-Player2.tscn::PackedScene::7423579854851975592::1692071774::0::1::::<><>::uid://dpbbqf4owxoh<>uid://dsklwa0bmne0v<>uid://b0j1yw2gldla<>uid://dccr2vbwvgo0u<>uid://c4s0peqyq51xq<>uid://dikx8p1rdc6tu<>uid://nrebde114r57<>uid://ck488qtgty2no<>uid://df2dig0ryqt6t<>uid://dii5glrjkiki6<>uid://r6vr5fuqr2u8<>uid://b8v2kvw7biww5<>uid://bt0yiykjr4rvt<>uid://dki65nypag12l<>uid://d0v1gr8kdf5n4<>uid://c4bsnh0dfjkvd<>uid://bn0t4tx5boge5<>uid://djqtdknlnjdja<>uid://cguoehi4nqap4<>uid://b6nk75jiciuop<>uid://3x4grnftrj4k<>uid://b02ykfqychb18<>uid://6tcrw0brv1qx<>uid://cj16l6rhk1ny7<>uid://dbg15ojmjxjs0<>uid://d3ob8crdywmt3<>uid://dsxf7vdtxiekl<>uid://mp5tmk6aq2k4<>uid://i5axhn0pc867<>uid://c58d2ccvvnj11<>uid://dyc35jfyp8tot
+::res://juego2/::1692076263
+Player2.tscn::PackedScene::7423579854851975592::1692076263::0::1::::<><>::uid://dpbbqf4owxoh<>uid://dsklwa0bmne0v<>uid://b0j1yw2gldla<>uid://dccr2vbwvgo0u<>uid://c4s0peqyq51xq<>uid://dikx8p1rdc6tu<>uid://nrebde114r57<>uid://ck488qtgty2no<>uid://df2dig0ryqt6t<>uid://dii5glrjkiki6<>uid://r6vr5fuqr2u8<>uid://b8v2kvw7biww5<>uid://bt0yiykjr4rvt<>uid://dki65nypag12l<>uid://d0v1gr8kdf5n4<>uid://c4bsnh0dfjkvd<>uid://bn0t4tx5boge5<>uid://djqtdknlnjdja<>uid://cguoehi4nqap4<>uid://b6nk75jiciuop<>uid://3x4grnftrj4k<>uid://b02ykfqychb18<>uid://6tcrw0brv1qx<>uid://cj16l6rhk1ny7<>uid://dbg15ojmjxjs0<>uid://d3ob8crdywmt3<>uid://dsxf7vdtxiekl<>uid://mp5tmk6aq2k4<>uid://i5axhn0pc867<>uid://c58d2ccvvnj11<>uid://dyc35jfyp8tot
 ::res://juego2/assets/::1692067537
 cielo.png::CompressedTexture2D::8519226020587853341::1692066835::1692067537::1::::<><>::
 terreno.png::CompressedTexture2D::6615638078997645453::1692067504::1692067537::1::::<><>::
-::res://juego2/niveles/::1692071774
-nivel1.tscn::PackedScene::7579365663408893729::1692071774::0::1::::<><>::uid://dlsqt51jdg5yl<>uid://dd1bjmuuwseqi
-::res://juego2/resources/::1692071774
-tilemap.tscn::PackedScene::7969505148917810099::1692071774::0::1::::<><>::uid://c1iwufbyoloob<>uid://dtm1n4rq38nkn
+::res://juego2/niveles/::1692076263
+nivel1.tscn::PackedScene::7579365663408893729::1692076263::0::1::::<><>::uid://dlsqt51jdg5yl<>uid://dd1bjmuuwseqi
+::res://juego2/resources/::1692076263
+tilemap.tscn::PackedScene::7969505148917810099::1692076263::0::1::::<><>::uid://c1iwufbyoloob<>uid://dtm1n4rq38nkn
 ::res://Scripts/::1692064381
 GameOver.gd::GDScript::-1::1692064381::0::1::::<>CanvasLayer<>::
 player.gd::GDScript::-1::1692064381::0::1::::Player<>CharacterBody2D<>::

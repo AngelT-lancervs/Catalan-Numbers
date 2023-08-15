@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dd1bjmuuwseqi"]
+[gd_scene load_steps=35 format=3 uid="uid://dd1bjmuuwseqi"]
 
 [ext_resource type="Texture2D" uid="uid://dpbbqf4owxoh" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_0.png" id="1_epxdc"]
 [ext_resource type="Texture2D" uid="uid://dsklwa0bmne0v" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_0.png" id="1_jka0h"]
@@ -39,7 +39,8 @@ script/source = "extends CharacterBody2D
 var idle : bool
 var corriendoDerecha: bool
 var corriendoArriba: bool
-var speed = 100
+var speedX = 100
+var speedY = 100
 var movimientoMax : int = 0
 var movimientos : Array[int] #0 derecha , 1 arriba
 
@@ -52,41 +53,47 @@ func _ready():
 
 func _physics_process(delta):
 	print(movimientos)
-	if !Input.is_action_pressed(\"ui_right\") and !Input.is_action_pressed(\"ui_up\"):
-		correrDerecha()
-		correrArriba()
-		
+	correrDerecha()
+	correrArriba()
 	move_and_slide()
 
 func correrDerecha():
 	if Input.is_action_just_pressed(\"ui_right\") && !corriendoDerecha:
 		movimientoMax = 0 
 		corriendoDerecha = true
-		movimientos.append(0)
+		if speedX > 0:
+			movimientos.append(0)
 	if corriendoDerecha:
 		if movimientoMax <= 148:
-			velocity.x = 1 * speed
+			velocity.x = 1 * speedX
 			movimientoMax += 2
 			animation.play(\"run\")
+			return true
 		else:
 			velocity.x = 0
 			corriendoDerecha = false
 			animation.play(\"idle\")
-			
+			return false
+
+
+
 func correrArriba():
 	if Input.is_action_just_pressed(\"ui_up\") && !corriendoArriba:
 		movimientoMax = 0 
 		corriendoArriba = true
-		movimientos.append(1)
+		if speedY > 0:
+			movimientos.append(1)
 	if corriendoArriba:
 		if movimientoMax <= 148:
-			velocity.y = -1 * speed
+			velocity.y = -1 * speedY
 			movimientoMax += 2
 			animation.play(\"run\")
+			return true
 		else:
 			velocity.y = 0
 			corriendoArriba = false
 			animation.play(\"idle\")
+			return false
 
 
 
@@ -214,11 +221,8 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiby1"]
-size = Vector2(36, 46)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0thdt"]
-size = Vector2(20, 35)
+size = Vector2(30, 43.5)
 
 [node name="Player2" type="CharacterBody2D"]
 scale = Vector2(2, 2)
@@ -229,14 +233,8 @@ sprite_frames = SubResource("SpriteFrames_fqo6c")
 animation = &"run"
 frame_progress = 0.345351
 
-[node name="hitbox" type="Area2D" parent="."]
-
-[node name="deteccion" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-2, 6)
-shape = SubResource("RectangleShape2D_oiby1")
-
 [node name="hitboxglobal" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7.5)
+position = Vector2(-2, 3.25)
 shape = SubResource("RectangleShape2D_0thdt")
 
 [node name="Sounds" type="Node" parent="."]
