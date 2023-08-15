@@ -1,8 +1,3 @@
-res://Escenas/T3/Tutorial_3.tscn
-res://Escenas/N5/Nivel_5.tscn
-res://Escenas/personaje.tscn
-res://Escenas/S2_N5/Nivel_10.tscn
-res://Escenas/juego.tscn
-res://Escenas/T1/Tutorial_1.tscn
-res://Escenas/T2/Tutorial_2.tscn
-res://Escenas/N4/Nivel_4.tscn
+res://juego2/Player2.tscn
+res://juego2/resources/tilemap.tscn
+res://juego2/niveles/nivel1.tscn
