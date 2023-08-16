@@ -110,3 +110,6 @@ func mostrarFigura(i : int):
 		await contenedor.animation_finished
 		contenedor.visible = false
 		
+		
+
+

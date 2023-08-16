@@ -1,33 +1,40 @@
-[gd_scene load_steps=35 format=3 uid="uid://dd1bjmuuwseqi"]
+[gd_scene load_steps=42 format=3 uid="uid://dd1bjmuuwseqi"]
 
 [ext_resource type="Texture2D" uid="uid://dpbbqf4owxoh" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_0.png" id="1_epxdc"]
 [ext_resource type="Texture2D" uid="uid://dsklwa0bmne0v" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_0.png" id="1_jka0h"]
-[ext_resource type="Texture2D" uid="uid://b0j1yw2gldla" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_1.png" id="2_ejk06"]
 [ext_resource type="Texture2D" uid="uid://dccr2vbwvgo0u" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_1.png" id="2_nsbva"]
-[ext_resource type="Texture2D" uid="uid://c4s0peqyq51xq" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_2.png" id="3_n5ock"]
 [ext_resource type="Texture2D" uid="uid://dikx8p1rdc6tu" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_2.png" id="3_tmbpp"]
-[ext_resource type="Texture2D" uid="uid://nrebde114r57" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_3.png" id="4_jh76r"]
 [ext_resource type="Texture2D" uid="uid://ck488qtgty2no" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_3.png" id="4_p1xqc"]
-[ext_resource type="Texture2D" uid="uid://df2dig0ryqt6t" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_4.png" id="5_6kohm"]
 [ext_resource type="Texture2D" uid="uid://dii5glrjkiki6" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_4.png" id="5_ho7mm"]
 [ext_resource type="Texture2D" uid="uid://r6vr5fuqr2u8" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_5.png" id="6_3m4fu"]
-[ext_resource type="Texture2D" uid="uid://b8v2kvw7biww5" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_5.png" id="6_kv3tw"]
 [ext_resource type="Texture2D" uid="uid://bt0yiykjr4rvt" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_6.png" id="7_e7ajq"]
-[ext_resource type="Texture2D" uid="uid://dki65nypag12l" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_6.png" id="7_jya66"]
-[ext_resource type="Texture2D" uid="uid://d0v1gr8kdf5n4" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_7.png" id="8_pu5dg"]
 [ext_resource type="Texture2D" uid="uid://c4bsnh0dfjkvd" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_7.png" id="8_q4jj3"]
 [ext_resource type="Texture2D" uid="uid://bn0t4tx5boge5" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_8.png" id="9_pct8a"]
 [ext_resource type="Texture2D" uid="uid://djqtdknlnjdja" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_9.png" id="10_xuwe3"]
 [ext_resource type="Texture2D" uid="uid://cguoehi4nqap4" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Hurt/HeroKnight_Hurt_0.png" id="11_lc6vr"]
 [ext_resource type="Texture2D" uid="uid://b6nk75jiciuop" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Hurt/HeroKnight_Hurt_1.png" id="12_2edr1"]
 [ext_resource type="Texture2D" uid="uid://3x4grnftrj4k" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Hurt/HeroKnight_Hurt_2.png" id="13_xqboc"]
+[ext_resource type="Texture2D" uid="uid://di87dv50nbrfq" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_0.png" id="21_435bq"]
+[ext_resource type="Texture2D" uid="uid://f7yn65fpxfry" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Attack2/HeroKnight_Attack2_0.png" id="21_uyjx5"]
+[ext_resource type="Texture2D" uid="uid://bxev1mbkshh67" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_1.png" id="22_1yts4"]
+[ext_resource type="Texture2D" uid="uid://cd1yxnrujavwf" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Attack2/HeroKnight_Attack2_1.png" id="22_dgnkc"]
 [ext_resource type="Texture2D" uid="uid://b02ykfqychb18" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_0.png" id="22_uyq06"]
 [ext_resource type="Texture2D" uid="uid://6tcrw0brv1qx" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_1.png" id="23_1tqhn"]
+[ext_resource type="Texture2D" uid="uid://c4ivuck12jlq0" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Attack2/HeroKnight_Attack2_2.png" id="23_osbex"]
+[ext_resource type="Texture2D" uid="uid://cmaidrnf07nbr" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_2.png" id="23_ur1a6"]
+[ext_resource type="Texture2D" uid="uid://ddaco3hg38ggk" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Attack2/HeroKnight_Attack2_3.png" id="24_44pb6"]
+[ext_resource type="Texture2D" uid="uid://crewxao14w7ix" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_3.png" id="24_kbhye"]
 [ext_resource type="Texture2D" uid="uid://cj16l6rhk1ny7" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_2.png" id="24_m0kd8"]
+[ext_resource type="Texture2D" uid="uid://drixrmjk78na5" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Attack2/HeroKnight_Attack2_4.png" id="25_2di1f"]
 [ext_resource type="Texture2D" uid="uid://dbg15ojmjxjs0" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_3.png" id="25_n27on"]
+[ext_resource type="Texture2D" uid="uid://dglr4no4lhs0" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_4.png" id="25_p5y3f"]
+[ext_resource type="Texture2D" uid="uid://be4qwv027yqnt" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_5.png" id="26_hc8g0"]
+[ext_resource type="Texture2D" uid="uid://cg61upuf6mnmb" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Attack2/HeroKnight_Attack2_5.png" id="26_sb8d7"]
 [ext_resource type="Texture2D" uid="uid://d3ob8crdywmt3" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_4.png" id="26_w6jp2"]
 [ext_resource type="Texture2D" uid="uid://dsxf7vdtxiekl" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_5.png" id="27_c277t"]
+[ext_resource type="Texture2D" uid="uid://s2tatmr138rq" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_6.png" id="27_hwoov"]
 [ext_resource type="Texture2D" uid="uid://mp5tmk6aq2k4" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_6.png" id="28_6vr5w"]
+[ext_resource type="Texture2D" uid="uid://c73wgc65vylnc" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/BlockIdle/HeroKnight_Block Idle_7.png" id="28_pe4vm"]
 [ext_resource type="Texture2D" uid="uid://i5axhn0pc867" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_7.png" id="29_uoga3"]
 [ext_resource type="Texture2D" uid="uid://c58d2ccvvnj11" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_8.png" id="30_lj6cj"]
 [ext_resource type="Texture2D" uid="uid://dyc35jfyp8tot" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_9.png" id="31_n1dl2"]
@@ -42,6 +49,7 @@ var corriendoArriba: bool
 var speedX = 100
 var speedY = 100
 var movimientoMax : int = 0
+var health = 3
 var movimientos : Array[int] #0 derecha , 1 arriba
 
 @onready var animation = $animaciones
@@ -52,7 +60,7 @@ func _ready():
 	corriendoArriba = false
 
 func _physics_process(delta):
-	print(movimientos)
+	#print(movimientos)
 	correrDerecha()
 	correrArriba()
 	move_and_slide()
@@ -61,8 +69,7 @@ func correrDerecha():
 	if Input.is_action_just_pressed(\"ui_right\") && !corriendoDerecha:
 		movimientoMax = 0 
 		corriendoDerecha = true
-		if speedX > 0:
-			movimientos.append(0)
+		movimientos.append(0)
 	if corriendoDerecha:
 		if movimientoMax <= 148:
 			velocity.x = 1 * speedX
@@ -71,8 +78,8 @@ func correrDerecha():
 			return true
 		else:
 			velocity.x = 0
-			corriendoDerecha = false
 			animation.play(\"idle\")
+			corriendoDerecha = false
 			return false
 
 
@@ -81,8 +88,7 @@ func correrArriba():
 	if Input.is_action_just_pressed(\"ui_up\") && !corriendoArriba:
 		movimientoMax = 0 
 		corriendoArriba = true
-		if speedY > 0:
-			movimientos.append(1)
+		movimientos.append(1)
 	if corriendoArriba:
 		if movimientoMax <= 148:
 			velocity.y = -1 * speedY
@@ -91,8 +97,8 @@ func correrArriba():
 			return true
 		else:
 			velocity.y = 0
-			corriendoArriba = false
 			animation.play(\"idle\")
+			corriendoArriba = false
 			return false
 
 
@@ -101,6 +107,29 @@ func correrArriba():
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fqo6c"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_uyjx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dgnkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_osbex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_44pb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2di1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sb8d7")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_epxdc")
@@ -158,28 +187,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_jka0h")
+"texture": ExtResource("21_435bq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ejk06")
+"texture": ExtResource("22_1yts4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_n5ock")
+"texture": ExtResource("23_ur1a6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_jh76r")
+"texture": ExtResource("24_kbhye")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_6kohm")
+"texture": ExtResource("25_p5y3f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_kv3tw")
+"texture": ExtResource("26_hc8g0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_jya66")
+"texture": ExtResource("27_hwoov")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_pu5dg")
+"texture": ExtResource("28_pe4vm")
 }],
 "loop": true,
 "name": &"idle",
@@ -222,7 +251,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0thdt"]
-size = Vector2(30, 43.5)
+size = Vector2(30, 10)
 
 [node name="Player2" type="CharacterBody2D"]
 scale = Vector2(2, 2)
@@ -230,11 +259,10 @@ script = SubResource("GDScript_6qy3i")
 
 [node name="animaciones" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fqo6c")
-animation = &"run"
-frame_progress = 0.345351
+animation = &"idle"
 
 [node name="hitboxglobal" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 3.25)
+position = Vector2(-2, 20)
 shape = SubResource("RectangleShape2D_0thdt")
 
 [node name="Sounds" type="Node" parent="."]

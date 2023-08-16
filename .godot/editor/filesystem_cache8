@@ -1,10 +1,10 @@
 2a60927148abd1d33b818b535e306557
-::res://::1692076430
+::res://::1692150191
 Dark VFX 2 (48x64).png::CompressedTexture2D::1629301800225040883::1692064381::1692064381::1::::<><>::
-export_presets.cfg::TextFile::-1::1692064381::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1692078684::0::1::::<><>::
 README.md::TextFile::-1::1692064381::0::1::::<><>::
 ::res://Assets/::1692064380
-::res://Assets/Characters/::1692064380
+::res://Assets/Characters/::1692159453
 ground_monk_FREE_v1.3-SpriteSheet_288x128.png::CompressedTexture2D::6943120045746084952::1692064380::1692064380::1::::<><>::
 ::res://Assets/Characters/Animated insect enemy assets/::1692064380
 AcidBlob.png::CompressedTexture2D::1632597583140060026::1692064380::1692064380::1::::<><>::
@@ -21,6 +21,138 @@ MaggotWalk.png::CompressedTexture2D::669566846713244630::1692064380::1692064380:
 Mantis.png::CompressedTexture2D::2158163075928197441::1692064380::1692064380::1::::<><>::
 MantisAttack.png::CompressedTexture2D::552029393422140193::1692064380::1692064380::1::::<><>::
 MantisMove.png::CompressedTexture2D::905260220700858160::1692064380::1692064380::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/::1692159453
+Contact.txt::TextFile::-1::1601133101::0::1::::<><>::
+License.txt::TextFile::-1::1601132957::0::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/::1692159453
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Attack/::1692159453
+Bringer-of-Death_Attack_1.png::CompressedTexture2D::5903989578705665527::1617352734::1692159455::1::::<><>::
+Bringer-of-Death_Attack_2.png::CompressedTexture2D::1402065491289535399::1617352734::1692159455::1::::<><>::
+Bringer-of-Death_Attack_3.png::CompressedTexture2D::5828151164028978008::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_4.png::CompressedTexture2D::852378041992868237::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_5.png::CompressedTexture2D::5766311621438823569::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_6.png::CompressedTexture2D::3742748612567484147::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_7.png::CompressedTexture2D::8672960079127245588::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_8.png::CompressedTexture2D::1183567840611447728::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_9.png::CompressedTexture2D::594630122803174128::1617352735::1692159455::1::::<><>::
+Bringer-of-Death_Attack_10.png::CompressedTexture2D::7559690128401729909::1617352735::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Cast/::1692159453
+Bringer-of-Death_Cast_1.png::CompressedTexture2D::3978418674304524668::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_2.png::CompressedTexture2D::531438628084446156::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_3.png::CompressedTexture2D::5516287267192437112::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_4.png::CompressedTexture2D::2071907286957244597::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_5.png::CompressedTexture2D::2354228867111613591::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_6.png::CompressedTexture2D::1419857150857648545::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_7.png::CompressedTexture2D::4574782340494772369::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_8.png::CompressedTexture2D::4048213007279592403::1617352769::1692159455::1::::<><>::
+Bringer-of-Death_Cast_9.png::CompressedTexture2D::7944695227478425602::1617352769::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Death/::1692159453
+Bringer-of-Death_Death_1.png::CompressedTexture2D::2318694179144880806::1617352756::1692159455::1::::<><>::
+Bringer-of-Death_Death_2.png::CompressedTexture2D::2456333562738791827::1617352756::1692159455::1::::<><>::
+Bringer-of-Death_Death_3.png::CompressedTexture2D::5828380028453450293::1617352756::1692159455::1::::<><>::
+Bringer-of-Death_Death_4.png::CompressedTexture2D::2528315442384533047::1617352757::1692159455::1::::<><>::
+Bringer-of-Death_Death_5.png::CompressedTexture2D::1615444191009303651::1617352757::1692159455::1::::<><>::
+Bringer-of-Death_Death_6.png::CompressedTexture2D::723871282234122199::1617352757::1692159455::1::::<><>::
+Bringer-of-Death_Death_7.png::CompressedTexture2D::5027109539864797647::1617352757::1692159455::1::::<><>::
+Bringer-of-Death_Death_8.png::CompressedTexture2D::9056941694439747834::1617352757::1692159455::1::::<><>::
+Bringer-of-Death_Death_9.png::CompressedTexture2D::1684035134250475980::1617352757::1692159455::1::::<><>::
+Bringer-of-Death_Death_10.png::CompressedTexture2D::2126777951595936334::1617352757::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Hurt/::1692159453
+Bringer-of-Death_Hurt_1.png::CompressedTexture2D::5677974949451444208::1617352744::1692159455::1::::<><>::
+Bringer-of-Death_Hurt_2.png::CompressedTexture2D::830696657977239633::1617352744::1692159455::1::::<><>::
+Bringer-of-Death_Hurt_3.png::CompressedTexture2D::7698341848197070409::1617352745::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Idle/::1692159453
+Bringer-of-Death_Idle_1.png::CompressedTexture2D::6078780197162920855::1617352703::1692159455::1::::<><>::
+Bringer-of-Death_Idle_2.png::CompressedTexture2D::8669734485984758576::1617352703::1692159455::1::::<><>::
+Bringer-of-Death_Idle_3.png::CompressedTexture2D::3687364828138078677::1617352703::1692159455::1::::<><>::
+Bringer-of-Death_Idle_4.png::CompressedTexture2D::6714154150229499325::1617352703::1692159455::1::::<><>::
+Bringer-of-Death_Idle_5.png::CompressedTexture2D::8815636427675256966::1617352703::1692159455::1::::<><>::
+Bringer-of-Death_Idle_6.png::CompressedTexture2D::6661544589856822859::1617352703::1692159455::1::::<><>::
+Bringer-of-Death_Idle_7.png::CompressedTexture2D::3475077142541345200::1617352704::1692159455::1::::<><>::
+Bringer-of-Death_Idle_8.png::CompressedTexture2D::6009556114309434195::1617352704::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/No Effect Sprites/::1692159453
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Attack/::1692159453
+Bringer-of-Death_Attack_1.png::CompressedTexture2D::7952399346359649970::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_2.png::CompressedTexture2D::7266435206469274118::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_3.png::CompressedTexture2D::3828811387334324230::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_4.png::CompressedTexture2D::8163174138082218839::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_5.png::CompressedTexture2D::1849853102439134295::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_6.png::CompressedTexture2D::8365296605352360394::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_7.png::CompressedTexture2D::6883445417024976412::1617352952::1692159455::1::::<><>::
+Bringer-of-Death_Attack_8.png::CompressedTexture2D::8922273849401886655::1617352953::1692159455::1::::<><>::
+Bringer-of-Death_Attack_9.png::CompressedTexture2D::8064827537261446109::1617352953::1692159455::1::::<><>::
+Bringer-of-Death_Attack_10.png::CompressedTexture2D::765661726074570242::1617352953::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Cast/::1692159453
+Bringer-of-Death_Cast_1.png::CompressedTexture2D::4675866740948516224::1617352980::1692159455::1::::<><>::
+Bringer-of-Death_Cast_2.png::CompressedTexture2D::7778920680111361100::1617352980::1692159455::1::::<><>::
+Bringer-of-Death_Cast_3.png::CompressedTexture2D::2439240113028371707::1617352981::1692159455::1::::<><>::
+Bringer-of-Death_Cast_4.png::CompressedTexture2D::8326665281847168208::1617352981::1692159455::1::::<><>::
+Bringer-of-Death_Cast_5.png::CompressedTexture2D::1128815548298840707::1617352981::1692159455::1::::<><>::
+Bringer-of-Death_Cast_6.png::CompressedTexture2D::196292241747859743::1617352981::1692159455::1::::<><>::
+Bringer-of-Death_Cast_7.png::CompressedTexture2D::8197206605196520177::1617352981::1692159455::1::::<><>::
+Bringer-of-Death_Cast_8.png::CompressedTexture2D::4663786615108110456::1617352981::1692159455::1::::<><>::
+Bringer-of-Death_Cast_9.png::CompressedTexture2D::8258940788713298667::1617352981::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Death/::1692159453
+Bringer-of-Death_Death_1.png::CompressedTexture2D::7568707396328316427::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_2.png::CompressedTexture2D::6019190712959409819::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_3.png::CompressedTexture2D::3250802053263752730::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_4.png::CompressedTexture2D::1422430541240272842::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_5.png::CompressedTexture2D::4582258855355618934::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_6.png::CompressedTexture2D::5775550820642353787::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_7.png::CompressedTexture2D::7009544346933489924::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_8.png::CompressedTexture2D::5968842377786994978::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_9.png::CompressedTexture2D::3961600518358291899::1617352971::1692159455::1::::<><>::
+Bringer-of-Death_Death_10.png::CompressedTexture2D::7789110691569598912::1617352971::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Hurt/::1692159453
+Bringer-of-Death_Hurt_1.png::CompressedTexture2D::2490830618893813308::1617352962::1692159455::1::::<><>::
+Bringer-of-Death_Hurt_2.png::CompressedTexture2D::1076959479197347860::1617352962::1692159455::1::::<><>::
+Bringer-of-Death_Hurt_3.png::CompressedTexture2D::5826935622064235237::1617352962::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/No Effect Sprites/Spell/::1692159453
+Bringer-of-Death_Spell_1.png::CompressedTexture2D::6570196853230341913::1617352989::1692159455::1::::<><>::
+Bringer-of-Death_Spell_2.png::CompressedTexture2D::7880096017323834009::1617352989::1692159455::1::::<><>::
+Bringer-of-Death_Spell_3.png::CompressedTexture2D::6406997371453195024::1617352989::1692159455::1::::<><>::
+Bringer-of-Death_Spell_4.png::CompressedTexture2D::3291119562545898696::1617352989::1692159455::1::::<><>::
+Bringer-of-Death_Spell_5.png::CompressedTexture2D::5666334321613905151::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_6.png::CompressedTexture2D::169598717245703009::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_7.png::CompressedTexture2D::6088945353863787602::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_8.png::CompressedTexture2D::1369825644287145295::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_9.png::CompressedTexture2D::8763484767295330730::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_10.png::CompressedTexture2D::1069932119224454695::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_11.png::CompressedTexture2D::1583225619531307559::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_12.png::CompressedTexture2D::2194552516452070131::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_13.png::CompressedTexture2D::3273990178548297036::1617352990::1692159454::1::::<><>::
+Bringer-of-Death_Spell_14.png::CompressedTexture2D::3069716349077402400::1617352990::1692159455::1::::<><>::
+Bringer-of-Death_Spell_15.png::CompressedTexture2D::7500927910796924196::1617352991::1692159455::1::::<><>::
+Bringer-of-Death_Spell_16.png::CompressedTexture2D::3964984401437614448::1617352991::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Spell/::1692159453
+Bringer-of-Death_Spell_1.png::CompressedTexture2D::4475508569540696572::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_2.png::CompressedTexture2D::8967537226188065818::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_3.png::CompressedTexture2D::7848008240372773825::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_4.png::CompressedTexture2D::5156524825894781800::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_5.png::CompressedTexture2D::8313468814533032756::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_6.png::CompressedTexture2D::6406002820439923226::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_7.png::CompressedTexture2D::4765329062136444593::1617352782::1692159455::1::::<><>::
+Bringer-of-Death_Spell_8.png::CompressedTexture2D::6996338755444276268::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_9.png::CompressedTexture2D::8304483923896831870::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_10.png::CompressedTexture2D::8362259324585443666::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_11.png::CompressedTexture2D::17788963367443685::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_12.png::CompressedTexture2D::244384242490488805::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_13.png::CompressedTexture2D::7198027782976388940::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_14.png::CompressedTexture2D::7922786775531686951::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_15.png::CompressedTexture2D::2091354957601184340::1617352783::1692159455::1::::<><>::
+Bringer-of-Death_Spell_16.png::CompressedTexture2D::7732670261952930046::1617352783::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/Individual Sprite/Walk/::1692159453
+Bringer-of-Death_Walk_1.png::CompressedTexture2D::7477483733629830840::1617352723::1692159455::1::::<><>::
+Bringer-of-Death_Walk_2.png::CompressedTexture2D::3720598862682043402::1617352723::1692159455::1::::<><>::
+Bringer-of-Death_Walk_3.png::CompressedTexture2D::6312139685780644316::1617352724::1692159455::1::::<><>::
+Bringer-of-Death_Walk_4.png::CompressedTexture2D::3510955560814199065::1617352724::1692159455::1::::<><>::
+Bringer-of-Death_Walk_5.png::CompressedTexture2D::5429651882331187185::1617352724::1692159455::1::::<><>::
+Bringer-of-Death_Walk_6.png::CompressedTexture2D::3760699167483269668::1617352724::1692159455::1::::<><>::
+Bringer-of-Death_Walk_7.png::CompressedTexture2D::1141162905179871346::1617352724::1692159455::1::::<><>::
+Bringer-of-Death_Walk_8.png::CompressedTexture2D::2219359962004521332::1617352724::1692159455::1::::<><>::
+::res://Assets/Characters/Bringer-Of-Death/SpriteSheet/::1692159453
+Bringer-of-Death-SpritSheet.png::CompressedTexture2D::7014270473044454629::1617352432::1692159455::1::::<><>::
+Bringer-of-Death-SpritSheet_no-Effect.png::CompressedTexture2D::6276998702326916556::1617352513::1692159455::1::::<><>::
 ::res://Assets/Characters/fairy/::1692064380
 fairy_1.png::CompressedTexture2D::5522153822050607185::1692064380::1692064380::1::::<><>::
 fairy_2.png::CompressedTexture2D::179064463838176815::1692064380::1692064380::1::::<><>::
@@ -2459,15 +2591,19 @@ Tutorial_2.tscn::PackedScene::8401354431733054204::1692064396::0::1::::<><>::res
 tile_map.tscn::PackedScene::471093058570152929::1692064381::0::1::::<><>::uid://dx6vjqwkp034<>uid://b72pmt0gogqfy<>uid://lw1ydll22atx<>uid://cus5f30y50dlh<>uid://cvnwes3xu2lyb<>uid://q8cgp4m1lpt6<>uid://c0orubm2kgfsf<>uid://lfkwfyj0hxkh<>uid://omcl5ftklrw7
 Tutorial_3.gd::GDScript::-1::1692064381::0::1::::<>Node<>::
 Tutorial_3.tscn::PackedScene::7982404900078317494::1692064396::0::1::::<><>::res://Escenas/T3/Tutorial_3.gd<>uid://1u2er22w1tvk<>uid://gyg3l6r5h25b<>uid://0o67p58te0fy<>uid://bj3qd45iobklu<>uid://bmwghd74x2lh0<>uid://fjoh0rcrhl8w<>uid://l51npq6tsg3s<>uid://babl5s2mx0bds
-::res://juego2/::1692076263
-Player2.tscn::PackedScene::7423579854851975592::1692076263::0::1::::<><>::uid://dpbbqf4owxoh<>uid://dsklwa0bmne0v<>uid://b0j1yw2gldla<>uid://dccr2vbwvgo0u<>uid://c4s0peqyq51xq<>uid://dikx8p1rdc6tu<>uid://nrebde114r57<>uid://ck488qtgty2no<>uid://df2dig0ryqt6t<>uid://dii5glrjkiki6<>uid://r6vr5fuqr2u8<>uid://b8v2kvw7biww5<>uid://bt0yiykjr4rvt<>uid://dki65nypag12l<>uid://d0v1gr8kdf5n4<>uid://c4bsnh0dfjkvd<>uid://bn0t4tx5boge5<>uid://djqtdknlnjdja<>uid://cguoehi4nqap4<>uid://b6nk75jiciuop<>uid://3x4grnftrj4k<>uid://b02ykfqychb18<>uid://6tcrw0brv1qx<>uid://cj16l6rhk1ny7<>uid://dbg15ojmjxjs0<>uid://d3ob8crdywmt3<>uid://dsxf7vdtxiekl<>uid://mp5tmk6aq2k4<>uid://i5axhn0pc867<>uid://c58d2ccvvnj11<>uid://dyc35jfyp8tot
+::res://juego2/::1692158097
+GUI.tscn::PackedScene::4128334428487523672::1692155205::0::1::::<><>::uid://di5v01xnu3jja<>uid://n3mwqjpq2c4v<>uid://dfw5tio71p0nd
+Player2.tscn::PackedScene::7423579854851975592::1692158097::0::1::::<><>::uid://dpbbqf4owxoh<>uid://dsklwa0bmne0v<>uid://b0j1yw2gldla<>uid://dccr2vbwvgo0u<>uid://c4s0peqyq51xq<>uid://dikx8p1rdc6tu<>uid://nrebde114r57<>uid://ck488qtgty2no<>uid://df2dig0ryqt6t<>uid://dii5glrjkiki6<>uid://r6vr5fuqr2u8<>uid://b8v2kvw7biww5<>uid://bt0yiykjr4rvt<>uid://dki65nypag12l<>uid://d0v1gr8kdf5n4<>uid://c4bsnh0dfjkvd<>uid://bn0t4tx5boge5<>uid://djqtdknlnjdja<>uid://cguoehi4nqap4<>uid://b6nk75jiciuop<>uid://3x4grnftrj4k<>uid://b02ykfqychb18<>uid://6tcrw0brv1qx<>uid://cj16l6rhk1ny7<>uid://dbg15ojmjxjs0<>uid://d3ob8crdywmt3<>uid://dsxf7vdtxiekl<>uid://mp5tmk6aq2k4<>uid://i5axhn0pc867<>uid://c58d2ccvvnj11<>uid://dyc35jfyp8tot
 ::res://juego2/assets/::1692067537
 cielo.png::CompressedTexture2D::8519226020587853341::1692066835::1692067537::1::::<><>::
 terreno.png::CompressedTexture2D::6615638078997645453::1692067504::1692067537::1::::<><>::
-::res://juego2/niveles/::1692076263
-nivel1.tscn::PackedScene::7579365663408893729::1692076263::0::1::::<><>::uid://dlsqt51jdg5yl<>uid://dd1bjmuuwseqi
-::res://juego2/resources/::1692076263
-tilemap.tscn::PackedScene::7969505148917810099::1692076263::0::1::::<><>::uid://c1iwufbyoloob<>uid://dtm1n4rq38nkn
+::res://juego2/niveles/::1692158806
+nivel1.tscn::PackedScene::7579365663408893729::1692158097::0::1::::<><>::uid://dlsqt51jdg5yl<>uid://1u2er22w1tvk<>uid://dd1bjmuuwseqi<>uid://by22chabppfjk<>uid://ckw8cjbyagsp2<>uid://cs0fvnc2o7l0<>uid://cda7k5dgvu167<>uid://dg3prha8aa8he
+nivel2.tscn::PackedScene::3438852059592944027::1692158097::0::1::::<><>::uid://1u2er22w1tvk<>uid://dlsqt51jdg5yl<>uid://dd1bjmuuwseqi<>uid://by22chabppfjk<>uid://ckw8cjbyagsp2<>uid://cs0fvnc2o7l0<>uid://cda7k5dgvu167<>uid://dg3prha8aa8he
+nivel3.tscn::PackedScene::4445758361626186716::1692158806::0::1::::<><>::uid://1u2er22w1tvk<>uid://dlsqt51jdg5yl<>uid://dd1bjmuuwseqi<>uid://by22chabppfjk<>uid://ckw8cjbyagsp2<>uid://cs0fvnc2o7l0<>uid://cda7k5dgvu167<>uid://dg3prha8aa8he
+::res://juego2/resources/::1692158831
+enemigo1.tscn::PackedScene::2904248992072308880::1692158831::0::1::::<><>::
+tilemap.tscn::PackedScene::7969505148917810099::1692158097::0::1::::<><>::uid://c1iwufbyoloob<>uid://dtm1n4rq38nkn
 ::res://Scripts/::1692064381
 GameOver.gd::GDScript::-1::1692064381::0::1::::<>CanvasLayer<>::
 player.gd::GDScript::-1::1692064381::0::1::::Player<>CharacterBody2D<>::

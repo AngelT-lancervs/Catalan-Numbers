@@ -1,3 +1,9 @@
+res://juego2/niveles/nivel1.tscn
 res://juego2/Player2.tscn
 res://juego2/resources/tilemap.tscn
-res://juego2/niveles/nivel1.tscn
+res://juego2/GUI.tscn
+res://juego2/niveles/nivel2.tscn
+res://juego2/niveles/nivel3.tscn
+res://juego2/resources/enemigo1.tscn
+res://Escenas/transition.tscn
+res://Scripts/transition.gd

@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://by22chabppfjk"]
+
+[ext_resource type="Texture2D" uid="uid://di5v01xnu3jja" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Plain/5 Mini Map/1.png" id="1_4u5ir"]
+[ext_resource type="Texture2D" uid="uid://n3mwqjpq2c4v" path="res://Assets/UI/Retro Inventory/Scaled 2x/Hearts_Yellow_5.png" id="2_bda6m"]
+[ext_resource type="Texture2D" uid="uid://dfw5tio71p0nd" path="res://Assets/UI/Retro Inventory/Original/Heart_Red_1.png" id="2_romb0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_448bs"]
+font_size = 74
+font_color = Color(0.901961, 0.282353, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_luved"]
+font_color = Color(0.894118, 0.541176, 0.533333, 1)
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -48.0
+offset_right = -8.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mov" type="Sprite2D" parent="Control"]
+position = Vector2(792, 144)
+scale = Vector2(1.33929, 1.21429)
+texture = ExtResource("1_4u5ir")
+
+[node name="movRestantes" type="Label" parent="Control/mov"]
+offset_left = -23.8932
+offset_top = -32.9411
+offset_right = 19.1068
+offset_bottom = 75.0589
+text = "0"
+label_settings = SubResource("LabelSettings_448bs")
+
+[node name="Label" type="Label" parent="Control/mov"]
+offset_left = -47.7865
+offset_top = -65.8821
+offset_right = 54.2135
+offset_bottom = -13.8821
+text = "Movimientos
+ Restantes"
+label_settings = SubResource("LabelSettings_luved")
+
+[node name="vida1" type="Sprite2D" parent="."]
+position = Vector2(104, 88)
+scale = Vector2(3.25, 3)
+texture = ExtResource("2_bda6m")
+metadata/_edit_group_ = true
+
+[node name="1" type="Sprite2D" parent="vida1"]
+position = Vector2(-2.46154, 1.90735e-06)
+scale = Vector2(2.07692, 2.08333)
+texture = ExtResource("2_romb0")
+
+[node name="vida2" type="Sprite2D" parent="."]
+position = Vector2(224, 88)
+scale = Vector2(3.25, 3)
+texture = ExtResource("2_bda6m")
+metadata/_edit_group_ = true
+
+[node name="2" type="Sprite2D" parent="vida2"]
+position = Vector2(-2.46154, 1.90735e-06)
+scale = Vector2(2.07692, 2.08333)
+texture = ExtResource("2_romb0")
+
+[node name="vida3" type="Sprite2D" parent="."]
+position = Vector2(344, 88)
+scale = Vector2(3.25, 3)
+texture = ExtResource("2_bda6m")
+metadata/_edit_group_ = true
+
+[node name="3" type="Sprite2D" parent="vida3"]
+position = Vector2(-2.46154, 1.90735e-06)
+scale = Vector2(2.07692, 2.08333)
+texture = ExtResource("2_romb0")
