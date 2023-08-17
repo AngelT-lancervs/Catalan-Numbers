@@ -13,6 +13,14 @@ script/source = "extends CharacterBody2D
 func _ready():
 	animation.play(\"idle\")
 	
+
+func _on_hitbox_body_entered(body):
+	if body != self:
+		body.hurt()
+		animation.play(\"attack\")
+		await animation.animation_finished
+		body.recibirDaño(20)
+		self.queue_free()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_us7ph"]
@@ -250,7 +258,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 10.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -342,7 +350,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yto2r"]
-radius = 20.0
+radius = 16.0
 
 [node name="enemigo1" type="CharacterBody2D"]
 script = SubResource("GDScript_734q8")
@@ -358,4 +366,7 @@ flip_h = true
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_yto2r")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

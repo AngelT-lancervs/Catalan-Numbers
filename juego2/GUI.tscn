@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://by22chabppfjk"]
+[gd_scene load_steps=7 format=3 uid="uid://by22chabppfjk"]
 
 [ext_resource type="Texture2D" uid="uid://di5v01xnu3jja" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Plain/5 Mini Map/1.png" id="1_4u5ir"]
-[ext_resource type="Texture2D" uid="uid://n3mwqjpq2c4v" path="res://Assets/UI/Retro Inventory/Scaled 2x/Hearts_Yellow_5.png" id="2_bda6m"]
-[ext_resource type="Texture2D" uid="uid://dfw5tio71p0nd" path="res://Assets/UI/Retro Inventory/Original/Heart_Red_1.png" id="2_romb0"]
+[ext_resource type="Texture2D" uid="uid://g0w65y4ui7av" path="res://Assets/UI/Retro Inventory/Original/Health_01.png" id="2_dinno"]
+[ext_resource type="Texture2D" uid="uid://bnso54j7p8cos" path="res://Assets/UI/Retro Inventory/Original/Health_01_Bar03.png" id="3_rftoe"]
+[ext_resource type="Texture2D" uid="uid://bbil35d47oj3x" path="res://Assets/UI/Retro Inventory/Original/Hearts_Blue_1.png" id="4_c7jd6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_448bs"]
 font_size = 74
@@ -26,17 +27,19 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="mov" type="Sprite2D" parent="Control"]
-position = Vector2(792, 144)
+position = Vector2(1264, 136)
 scale = Vector2(1.33929, 1.21429)
 texture = ExtResource("1_4u5ir")
 
 [node name="movRestantes" type="Label" parent="Control/mov"]
-offset_left = -23.8932
+offset_left = -47.7866
 offset_top = -32.9411
-offset_right = 19.1068
+offset_right = 48.2134
 offset_bottom = 75.0589
 text = "0"
 label_settings = SubResource("LabelSettings_448bs")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Control/mov"]
 offset_left = -47.7865
@@ -47,35 +50,21 @@ text = "Movimientos
  Restantes"
 label_settings = SubResource("LabelSettings_luved")
 
-[node name="vida1" type="Sprite2D" parent="."]
-position = Vector2(104, 88)
-scale = Vector2(3.25, 3)
-texture = ExtResource("2_bda6m")
-metadata/_edit_group_ = true
+[node name="barraVida" type="TextureProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.041
+anchor_bottom = 0.056
+offset_left = 32.0
+offset_top = 80.0
+offset_right = 351.994
+offset_bottom = 135.68
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_dinno")
+texture_progress = ExtResource("3_rftoe")
 
-[node name="1" type="Sprite2D" parent="vida1"]
-position = Vector2(-2.46154, 1.90735e-06)
-scale = Vector2(2.07692, 2.08333)
-texture = ExtResource("2_romb0")
-
-[node name="vida2" type="Sprite2D" parent="."]
-position = Vector2(224, 88)
-scale = Vector2(3.25, 3)
-texture = ExtResource("2_bda6m")
-metadata/_edit_group_ = true
-
-[node name="2" type="Sprite2D" parent="vida2"]
-position = Vector2(-2.46154, 1.90735e-06)
-scale = Vector2(2.07692, 2.08333)
-texture = ExtResource("2_romb0")
-
-[node name="vida3" type="Sprite2D" parent="."]
-position = Vector2(344, 88)
-scale = Vector2(3.25, 3)
-texture = ExtResource("2_bda6m")
-metadata/_edit_group_ = true
-
-[node name="3" type="Sprite2D" parent="vida3"]
-position = Vector2(-2.46154, 1.90735e-06)
-scale = Vector2(2.07692, 2.08333)
-texture = ExtResource("2_romb0")
+[node name="corazon" type="Sprite2D" parent="Control/barraVida"]
+position = Vector2(56, 48)
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("4_c7jd6")

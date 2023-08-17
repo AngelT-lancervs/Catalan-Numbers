@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://yh3jvd5jin7w"]
+
+[ext_resource type="Texture2D" uid="uid://cqka58n124s" path="res://Assets/Characters/Animated insect enemy assets/BeetleMove.png" id="1_3vnbp"]
+[ext_resource type="Texture2D" uid="uid://bmg3ho0m2octo" path="res://Assets/Characters/Animated insect enemy assets/BeetleAttack.png" id="1_xac57"]
+
+[sub_resource type="GDScript" id="GDScript_2pg7u"]
+resource_name = "enemigo2"
+script/source = "extends CharacterBody2D
+
+@onready var animation = $AnimatedSprite2D
+
+func _ready():
+	animation.play(\"idle\")
+	
+
+func _on_hitbox_body_entered(body):
+	if body != self:
+		body.hurt()
+		animation.play(\"attack\")
+		await animation.animation_finished
+		body.recibirDaño(30)
+		self.queue_free()
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kswm4"]
+atlas = ExtResource("1_xac57")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq0un"]
+atlas = ExtResource("1_xac57")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g3ws"]
+atlas = ExtResource("1_xac57")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq2ds"]
+atlas = ExtResource("1_xac57")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgb6t"]
+atlas = ExtResource("1_xac57")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6li0x"]
+atlas = ExtResource("1_xac57")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiuq6"]
+atlas = ExtResource("1_3vnbp")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie75e"]
+atlas = ExtResource("1_3vnbp")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pfjd"]
+atlas = ExtResource("1_3vnbp")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4dix"]
+atlas = ExtResource("1_3vnbp")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyo31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kswm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq0un")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g3ws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq2ds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgb6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6li0x")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiuq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie75e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pfjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4dix")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j6row"]
+radius = 24.0
+
+[node name="enemigo2" type="CharacterBody2D"]
+script = SubResource("GDScript_2pg7u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_yyo31")
+animation = &"attack"
+frame = 5
+frame_progress = 1.0
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_j6row")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

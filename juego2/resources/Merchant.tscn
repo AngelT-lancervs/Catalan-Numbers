@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=3 uid="uid://jlgw8crlrow5"]
+
+[ext_resource type="Texture2D" uid="uid://clysvk1f0eibg" path="res://juego2/assets/merchant/merchant_00.png" id="1_sj6b0"]
+[ext_resource type="Texture2D" uid="uid://df7b7t0umehnx" path="res://juego2/assets/merchant/merchant_01.png" id="2_x0ufi"]
+[ext_resource type="Texture2D" uid="uid://l3eyoketbglf" path="res://juego2/assets/merchant/merchant_02.png" id="3_aspk5"]
+[ext_resource type="Texture2D" uid="uid://dt4eyy13ydutl" path="res://juego2/assets/merchant/merchant_03.png" id="4_ncyqq"]
+[ext_resource type="Texture2D" uid="uid://2dajlp011uym" path="res://juego2/assets/merchant/merchant_04.png" id="5_4u20p"]
+[ext_resource type="AudioStream" uid="uid://cryy1hjrmcy3l" path="res://juego2/assets/sounds2/interface-124464.mp3" id="6_lu08g"]
+
+[sub_resource type="GDScript" id="GDScript_j0l6m"]
+resource_name = "merchantScript"
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$AnimatedSprite2D.play(\"default\")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_body_entered(body):
+	if body != self:
+		body.movesJuego += 3
+		for a in range(15):
+			if body.health < 100:
+				body.health += 1
+				await get_tree().create_timer(0.001).timeout 
+			else:
+				break
+			
+		$Sound/coso.play()
+		await get_tree().create_timer(0.25).timeout
+		self.queue_free()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5g4i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sj6b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x0ufi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aspk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ncyqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4u20p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqk61"]
+radius = 40.0
+
+[node name="Merchant" type="Area2D"]
+script = SubResource("GDScript_j0l6m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_t5g4i")
+frame_progress = 0.764742
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jqk61")
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="coso" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("6_lu08g")
+volume_db = 6.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

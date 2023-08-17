@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dd1bjmuuwseqi"]
+[gd_scene load_steps=43 format=3 uid="uid://dd1bjmuuwseqi"]
 
 [ext_resource type="Texture2D" uid="uid://dpbbqf4owxoh" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Death/HeroKnight_Death_0.png" id="1_epxdc"]
 [ext_resource type="Texture2D" uid="uid://dsklwa0bmne0v" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Idle/HeroKnight_Idle_0.png" id="1_jka0h"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://i5axhn0pc867" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_7.png" id="29_uoga3"]
 [ext_resource type="Texture2D" uid="uid://c58d2ccvvnj11" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_8.png" id="30_lj6cj"]
 [ext_resource type="Texture2D" uid="uid://dyc35jfyp8tot" path="res://Assets/Characters/Hero Knight/Sprites/HeroKnight/Run/HeroKnight_Run_9.png" id="31_n1dl2"]
+[ext_resource type="AudioStream" uid="uid://0k0bmk56qdby" path="res://Assets/sounds/person-knocked-down-14798.mp3" id="39_kst1g"]
 
 [sub_resource type="GDScript" id="GDScript_6qy3i"]
 resource_name = "playerScript"
@@ -49,8 +50,10 @@ var corriendoArriba: bool
 var speedX = 100
 var speedY = 100
 var movimientoMax : int = 0
-var health = 3
+var health = 100
 var movimientos : Array[int] #0 derecha , 1 arriba
+var movesJuego = 0
+
 
 @onready var animation = $animaciones
 
@@ -66,12 +69,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 func correrDerecha():
-	if Input.is_action_just_pressed(\"ui_right\") && !corriendoDerecha:
+	if Input.is_action_just_pressed(\"ui_right\") && !corriendoDerecha and !corriendoArriba:
 		movimientoMax = 0 
 		corriendoDerecha = true
 		movimientos.append(0)
 	if corriendoDerecha:
-		if movimientoMax <= 148:
+		if movimientoMax <= 152:
 			velocity.x = 1 * speedX
 			movimientoMax += 2
 			animation.play(\"run\")
@@ -85,12 +88,12 @@ func correrDerecha():
 
 
 func correrArriba():
-	if Input.is_action_just_pressed(\"ui_up\") && !corriendoArriba:
+	if Input.is_action_just_pressed(\"ui_up\") && !corriendoArriba and !corriendoDerecha:
 		movimientoMax = 0 
 		corriendoArriba = true
 		movimientos.append(1)
-	if corriendoArriba:
-		if movimientoMax <= 148:
+	if corriendoArriba and !corriendoDerecha:
+		if movimientoMax <= 152:
 			velocity.y = -1 * speedY
 			movimientoMax += 2
 			animation.play(\"run\")
@@ -101,8 +104,16 @@ func correrArriba():
 			corriendoArriba = false
 			return false
 
+func hurt():
+	animation.play(\"hurt\")
+	await animation.animation_looped
+	animation.play(\"idle\")
 
-
+func recibirDaño(i):
+	$AudioStreamPlayer2D.play()
+	for a in range(i):
+		health -= 1
+		await get_tree().create_timer(0.001).timeout 
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fqo6c"]
@@ -181,9 +192,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_jka0h")
 }],
-"loop": false,
+"loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -259,7 +270,7 @@ script = SubResource("GDScript_6qy3i")
 
 [node name="animaciones" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fqo6c")
-animation = &"idle"
+animation = &"hurt"
 
 [node name="hitboxglobal" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 20)
@@ -267,5 +278,7 @@ shape = SubResource("RectangleShape2D_0thdt")
 
 [node name="Sounds" type="Node" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("39_kst1g")
+volume_db = 7.0
+max_distance = 900000.0

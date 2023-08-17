@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://df8rbsfjxn15f"]
+[gd_scene load_steps=16 format=3 uid="uid://df8rbsfjxn15f"]
 
 [ext_resource type="PackedScene" uid="uid://dlsqt51jdg5yl" path="res://juego2/resources/tilemap.tscn" id="1_hggom"]
 [ext_resource type="PackedScene" uid="uid://1u2er22w1tvk" path="res://Escenas/GameOver.tscn" id="1_ijvfl"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cs0fvnc2o7l0" path="res://Assets/Characters/fairy/fairy_2.png" id="5_77k6x"]
 [ext_resource type="Texture2D" uid="uid://cda7k5dgvu167" path="res://Assets/Characters/fairy/fairy_3.png" id="6_1lv0s"]
 [ext_resource type="Texture2D" uid="uid://dg3prha8aa8he" path="res://Assets/Characters/fairy/fairy_4.png" id="7_qkl17"]
+[ext_resource type="AudioStream" uid="uid://bqxl4w43mqnhe" path="res://juego2/assets/sounds2/victoria.mp3" id="9_ln5yv"]
+[ext_resource type="AudioStream" uid="uid://oen7rj58f1u2" path="res://Assets/sounds/bos.mp3" id="9_sxncu"]
 
 [sub_resource type="GDScript" id="GDScript_uh2by"]
 resource_name = "nivel1Script"
@@ -59,7 +61,6 @@ func _on_pared_body_entered(body):
 	player.movimientos.pop_back()
 	
 
-
 func _on_diagonal_body_entered(body):
 	body.speedY = 0
 	body.position.y = body.position.y + 24.5
@@ -78,7 +79,13 @@ func gameOver():
 		player.queue_free()
 
 func _on_fairy_body_entered(body):
+	$fairy/AudioStreamPlayer.play()
 	TRANSITION.changeEscena(\"res://juego2/niveles/nivel2.tscn\")
+	
+
+
+func _on_ost_finished():
+	$Sounds/ost.play()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubvfj"]
@@ -138,6 +145,15 @@ shape = SubResource("SegmentShape2D_si51f")
 position = Vector2(550, 650)
 metadata/_edit_group_ = true
 
+[node name="Camera2D" type="Camera2D" parent="Player2"]
+zoom = Vector2(2.5, 2.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1400
+limit_bottom = 700
+limit_smoothed = true
+editor_draw_limits = true
+
 [node name="GUI" parent="." instance=ExtResource("3_tuj3c")]
 
 [node name="fairy" type="Area2D" parent="."]
@@ -153,6 +169,18 @@ frame_progress = 0.750616
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fairy"]
 shape = SubResource("CircleShape2D_ab6hu")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="fairy"]
+stream = ExtResource("9_ln5yv")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="ost" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("9_sxncu")
+autoplay = true
+
 [connection signal="body_entered" from="pared" to="." method="_on_pared_body_entered"]
 [connection signal="body_entered" from="diagonal" to="." method="_on_diagonal_body_entered"]
 [connection signal="body_entered" from="fairy" to="." method="_on_fairy_body_entered"]
+[connection signal="finished" from="Sounds/ost" to="." method="_on_ost_finished"]
+
+[editable path="Player2"]

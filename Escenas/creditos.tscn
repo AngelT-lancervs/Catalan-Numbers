@@ -17,7 +17,7 @@ var isText = false
 func _ready():
 	$fairy.play(\"default\")
 	array.append(\"GRACIAS A TI CATALAN RECUPERÓ SU PODER Y AHORA PODRÁ TRIANGULAR 
-MÁS POLÍGONOS.
+MÁS POLÍGONOS Y PODRÁ ENCONTRAR UN CAMINO AL CIELO.
 
 ESTA SECCIÓN ES SIMPLEMENTE PARA AGRADECERTE EL TIEMPO QUE NOS 
 PRESTASTE PARA  PROBAR ESTE JUEGO QUE ES NUESTRO PROYECTO DE 
@@ -38,7 +38,7 @@ LuizMelo: https://luizmelo.itch.io/
 Chierit: https://chierit.itch.io/
 Sven: https://sventhole.itch.io/
 
-Al no ser un proyecto comercializable, no se infrijen las los términos
+Al no ser un proyecto comercializable, no se infrigen las los términos
 de uso\")
 
 	array.append(\"CRÉDITOS DE LAS MÚSICAS EXTERNAS USADAS:

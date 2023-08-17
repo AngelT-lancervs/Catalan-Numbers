@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmnonpv0fslx8"]
+[gd_scene load_steps=11 format=3 uid="uid://bmnonpv0fslx8"]
 
 [ext_resource type="Texture2D" uid="uid://cf6os2qxbipdq" path="res://Assets/UI/Free Paper UI System/1 Sprites/Book Desk/3.png" id="1_ygl7s"]
 [ext_resource type="Texture2D" uid="uid://cv0fkkpw6cq3" path="res://Assets/UI/Free Paper UI System/1 Sprites/Paper UI Pack/Paper UI/Plain/2 Headers/4.png" id="2_som0k"]
 [ext_resource type="Texture2D" uid="uid://b0xxu2byuvfr0" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/7 Day & Night Cycle/Items Holder/8.png" id="3_amx1k"]
 [ext_resource type="Texture2D" uid="uid://nbqborqemypd" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/2 Icons/22.png" id="4_4wfb6"]
+[ext_resource type="Texture2D" uid="uid://c50orvbumu7vb" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/8 Equipment/8.png" id="4_a4f5e"]
 [ext_resource type="Texture2D" uid="uid://dwwm8y24wmxim" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/2 Icons/23.png" id="5_7jwui"]
 [ext_resource type="Texture2D" uid="uid://dbi7d34q27ko0" path="res://Assets/UI/Free Paper UI System/1 Sprites/Content/2 Icons/11.png" id="6_iwxvk"]
 [ext_resource type="AudioStream" uid="uid://jseij338x5u6" path="res://Assets/sounds/X2Download.app - Apollo Justice_ Ace Attorney_ Soundtrack - Courtroom Lobby ~ New Prelude (128 kbps).mp3" id="7_gixva"]
@@ -22,16 +23,20 @@ func _process(delta):
 	pass
 
 
-func _on_jugar_pressed():
-	TRANSITION.changeEscena(\"res://Escenas/T1/Tutorial_1.tscn\")
-
-
 func _on_creditos_pressed():
 	TRANSITION.changeEscena(\"res://Escenas/creditos.tscn\")
 
 
 func _on_salir_2_pressed():
 	get_tree().quit()
+
+
+func _on_camino_pressed():
+	TRANSITION.changeEscena(\"res://juego2/niveles/nivel1.tscn\")
+
+
+func _on_catalan_pressed():
+	TRANSITION.changeEscena(\"res://Escenas/T1/Tutorial_1.tscn\")
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_u47lr"]
@@ -74,23 +79,34 @@ offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="jugar" type="Button" parent="Control"]
+[node name="camino" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 495.0
 offset_top = 95.0
 offset_right = 891.0
 offset_bottom = 202.0
 action_mode = 0
-text = "JUGAR"
+text = "PATH TO SKYE"
 icon = ExtResource("3_amx1k")
+expand_icon = true
+
+[node name="catalan" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 208.0
+offset_right = 891.0
+offset_bottom = 315.0
+action_mode = 0
+text = "CATALAN QUEST"
+icon = ExtResource("4_a4f5e")
 expand_icon = true
 
 [node name="creditos" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 500.0
-offset_top = 216.0
-offset_right = 893.0
-offset_bottom = 323.0
+offset_left = 496.0
+offset_top = 319.0
+offset_right = 889.0
+offset_bottom = 426.0
 action_mode = 0
 text = "CRÉDITOS"
 icon = ExtResource("4_4wfb6")
@@ -109,10 +125,10 @@ icon = ExtResource("5_7jwui")
 
 [node name="salir2" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 499.0
-offset_top = 340.0
-offset_right = 895.0
-offset_bottom = 447.0
+offset_left = 497.0
+offset_top = 432.0
+offset_right = 893.0
+offset_bottom = 539.0
 action_mode = 0
 text = "SALIR"
 icon = ExtResource("6_iwxvk")
@@ -122,6 +138,7 @@ expand_icon = true
 stream = ExtResource("7_gixva")
 autoplay = true
 
-[connection signal="pressed" from="Control/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Control/camino" to="." method="_on_camino_pressed"]
+[connection signal="pressed" from="Control/catalan" to="." method="_on_catalan_pressed"]
 [connection signal="pressed" from="Control/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="Control/salir2" to="." method="_on_salir_2_pressed"]
