@@ -37,6 +37,10 @@ func _on_camino_pressed():
 
 func _on_catalan_pressed():
 	TRANSITION.changeEscena(\"res://Escenas/T1/Tutorial_1.tscn\")
+
+
+func _on_ost_finished():
+	$ost.play()
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_u47lr"]
@@ -58,11 +62,11 @@ scale = Vector2(2.35491, 3.14062)
 texture = ExtResource("2_som0k")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 358.0
+offset_left = 337.0
 offset_top = 13.0
-offset_right = 1048.0
+offset_right = 1038.0
 offset_bottom = 144.0
-text = "CATALAN QUEST"
+text = "CATALAN NUMBER'S"
 label_settings = SubResource("LabelSettings_u47lr")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -86,7 +90,7 @@ offset_top = 95.0
 offset_right = 891.0
 offset_bottom = 202.0
 action_mode = 0
-text = "PATH TO SKYE"
+text = "PATH TO SKY"
 icon = ExtResource("3_amx1k")
 expand_icon = true
 
@@ -142,3 +146,4 @@ autoplay = true
 [connection signal="pressed" from="Control/catalan" to="." method="_on_catalan_pressed"]
 [connection signal="pressed" from="Control/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="Control/salir2" to="." method="_on_salir_2_pressed"]
+[connection signal="finished" from="ost" to="." method="_on_ost_finished"]
