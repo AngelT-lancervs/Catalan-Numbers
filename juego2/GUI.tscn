@@ -98,6 +98,7 @@ scale = Vector2(8.5, 5.25)
 texture = ExtResource("5_npu35")
 
 [node name="C" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 872.0
 offset_top = 48.0
 offset_right = 1024.0
@@ -106,6 +107,7 @@ text = "C  =   (2n)!"
 label_settings = SubResource("LabelSettings_dusjj")
 
 [node name="C2" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 904.0
 offset_top = 80.0
 offset_right = 1042.0
@@ -114,6 +116,7 @@ text = "    (n+1)!n!"
 label_settings = SubResource("LabelSettings_dusjj")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
 offset_left = 928.0
 offset_top = 80.0
 offset_right = 1032.0
@@ -121,6 +124,7 @@ offset_bottom = 83.0
 color = Color(0.509804, 0.266667, 0.254902, 1)
 
 [node name="n_minus" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 896.0
 offset_top = 72.0
 offset_right = 925.0
@@ -130,6 +134,7 @@ text = "n
 label_settings = SubResource("LabelSettings_aaexo")
 
 [node name="numCatalanActual" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 1040.0
 offset_top = 56.0
 offset_right = 1072.0
@@ -139,6 +144,7 @@ text = "= 1
 label_settings = SubResource("LabelSettings_fhft7")
 
 [node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 936.0
 offset_top = 160.0
 offset_right = 1096.0

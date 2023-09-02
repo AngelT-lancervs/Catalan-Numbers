@@ -3,6 +3,7 @@ extends CanvasLayer
 var dialogos1 : Array[String]
 var dialogos2: Array[String]
 var dialogos3: Array[String]
+var dialogos4: Array[String]
 @onready var cajaTexto = $Control/cajaTexto
 @onready var fairy = $Control/fairy
 @onready var dialogoActual = $Control/dialogoActual
@@ -18,9 +19,11 @@ func _ready():
 	dialogos1.append("Otra cosa importante, el reino no está en su mejor momento\ny hay enemigos en cada rincón del reino, incluso en el bosque.")
 	dialogos1.append("...\nPor cierto ¿Cómo llegaste hasta este bosque?")
 	dialogos1.append("En fin, con" + " X " + "puedes atacar para defenderte de los enemigos.")
+	
 	dialogos2.append("¡Buen Trabajo! pero hay algo que debes saber.")
 	dialogos2.append("Quedarse por mucho tiempo en un solo lugar puede revelar nuestra ubicación D:")
 	dialogos2.append("Procura derrotar a todos los enemigos de la zona lo más pronto posible.")
+	
 	dialogos3.append("Por cierto, una última cosa.\nUn monje, ha poseído el cuerpo del Rey Catalan")
 	dialogos3.append("Y usó su propia fórmula para dividir su esencia en fragmentos >:(")
 	dialogos3.append("Mira la fórmula de arriba.")
@@ -37,6 +40,14 @@ func _ready():
 	dialogos3.append("De esa misma forma será para todas las demás formas que tiene su poder.")
 	dialogos3.append("Buena suerte, héroe.")
 	
+	dialogos4.append("Hola héroe, soy Eiry.")
+	dialogos4.append("Parece que deseas encontrar un camino al cielo :o")
+	dialogos4.append("Para lograr tu cometido solo te podrás mover hacia la derecha o hacia arriba.")
+	dialogos4.append("No podrás ir hacia atrás ni para abajo.\nPara llegar al cielo solo puede ir hacia adelante ;)")
+	dialogos4.append("En tu camino te encontrarás con enemigos y personas que te ayudarán\n en tu travesía.")
+	dialogos4.append("Es probable que te canses así que trata de hacerlo en la menor cantidad\n de movimientos.")
+	dialogos4.append("Buena suerte héroe ;)")
+	
 	
 	match (get_parent().name):
 		"Tutorial_1":
@@ -45,6 +56,8 @@ func _ready():
 			ponerDialogo(dialogos2)
 		"Tutorial_3":
 			ponerDialogo(dialogos3)
+		"nivel1":
+			ponerDialogo(dialogos4)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,6 +72,8 @@ func _process(delta):
 				ponerDialogo(dialogos2)
 			"Tutorial_3":
 				ponerDialogo(dialogos3)
+			"nivel1":
+				ponerDialogo(dialogos4)
 
 func ponerDialogo(array):
 	var isSkipping := false
@@ -73,7 +88,6 @@ func ponerDialogo(array):
 		for char in s:
 			if char != null && visible:
 				if isSkipping:
-					dialogoActual.text = s
 					break
 				else:
 					dialogoActual.text += char
