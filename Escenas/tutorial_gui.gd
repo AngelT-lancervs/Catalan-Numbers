@@ -43,7 +43,7 @@ func _ready():
 	dialogos4.append("Hola héroe, soy Eiry.")
 	dialogos4.append("Parece que deseas encontrar un camino al cielo :o")
 	dialogos4.append("Para lograr tu cometido solo te podrás mover hacia la derecha o hacia arriba.")
-	dialogos4.append("No podrás ir hacia atrás ni para abajo.\nPara llegar al cielo solo puede ir hacia adelante ;)")
+	dialogos4.append("No podrás ir hacia atrás ni para abajo.\nPara llegar al cielo solo puedes ir hacia adelante ;)")
 	dialogos4.append("En tu camino te encontrarás con enemigos y personas que te ayudarán\n en tu travesía.")
 	dialogos4.append("Es probable que te canses así que trata de hacerlo en la menor cantidad\n de movimientos.")
 	dialogos4.append("Buena suerte héroe ;)")
