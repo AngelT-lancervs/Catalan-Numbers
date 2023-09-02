@@ -1,13 +1,13 @@
+AudioStreamPlayer
+CollisionShape2D
+Area2D
+Label
 AnimatedSprite2D
 CharacterBody2D
 Node
 AudioStreamPlayer2D
-AudioStreamPlayer
-CollisionShape2D
-Area2D
 Sprite2D
 TextureProgressBar
-Label
 Button
 CanvasLayer
 Control

@@ -15,7 +15,6 @@ func _ready():
 
 func _on_hitbox_body_entered(body):
 	if body != self:
-		body.hurt()
 		animation.play(\"attack\")
 		await animation.animation_finished
 		body.recibirDaño(30)

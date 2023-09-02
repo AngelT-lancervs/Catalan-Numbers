@@ -1,14 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://bw2yulpfkb60i"]
+[gd_scene load_steps=23 format=3 uid="uid://bw2yulpfkb60i"]
 
 [ext_resource type="PackedScene" uid="uid://1u2er22w1tvk" path="res://Escenas/GameOver.tscn" id="1_107t2"]
 [ext_resource type="PackedScene" uid="uid://dlsqt51jdg5yl" path="res://juego2/resources/tilemap.tscn" id="2_f0jmn"]
 [ext_resource type="PackedScene" uid="uid://dd1bjmuuwseqi" path="res://juego2/Player2.tscn" id="3_b1ook"]
 [ext_resource type="PackedScene" uid="uid://by22chabppfjk" path="res://juego2/GUI.tscn" id="4_1ctke"]
-[ext_resource type="Texture2D" uid="uid://ckw8cjbyagsp2" path="res://Assets/Characters/fairy/fairy_1.png" id="5_5bqsy"]
-[ext_resource type="Texture2D" uid="uid://cs0fvnc2o7l0" path="res://Assets/Characters/fairy/fairy_2.png" id="6_7336d"]
-[ext_resource type="Texture2D" uid="uid://cda7k5dgvu167" path="res://Assets/Characters/fairy/fairy_3.png" id="7_offir"]
-[ext_resource type="Texture2D" uid="uid://dg3prha8aa8he" path="res://Assets/Characters/fairy/fairy_4.png" id="8_nr4ik"]
-[ext_resource type="AudioStream" uid="uid://bqxl4w43mqnhe" path="res://juego2/assets/sounds2/victoria.mp3" id="9_qbhij"]
+[ext_resource type="Texture2D" uid="uid://db2vi3n6qc0yo" path="res://Assets/Characters/Medieval King Pack 2/Sprites/Idle.png" id="5_peuu7"]
+[ext_resource type="AudioStream" uid="uid://cmlmjrgjsi40j" path="res://Assets/sounds/X2Download.app - (Custom) Natsuki ~ Objection! 2022 - Natsuki_ Ace Attorney (128 kbps).mp3" id="7_cjyih"]
 [ext_resource type="AudioStream" uid="uid://cg4w1vkos5hu" path="res://juego2/assets/sounds2/10_paArriba.mp3" id="10_kixt6"]
 [ext_resource type="PackedScene" uid="uid://jlgw8crlrow5" path="res://juego2/resources/Merchant.tscn" id="11_rpkhn"]
 [ext_resource type="PackedScene" uid="uid://bhm3s6n7mf601" path="res://juego2/resources/enemigo1.tscn" id="12_emdmm"]
@@ -25,19 +22,22 @@ var movimientos : int = 0
 @onready var batallaGUI = $batalla
 @onready var barraVida = $GUI/Control/barraVida
 @onready var corazonFinal = $GUI/Control/barraVida/corazon
+var num = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$GUI/Control/n_minus.text = \"12\"
+	$GUI/Control/numCatalanActual.text = \"= \" + str(TRANSITION.catalan(12))
+	$GUI/Control/posiblesC.text = str(1)
 	player.animation.play(\"idle\")
 	$fairy/AnimatedSprite2D.play(\"default\")
 	crearMatrix(5)
-	player.movesJuego = 6
+	player.movesJuego = 4
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	
 	if player != null: 
-		print(player.position.y)
 		progressBar()
 		
 		if player.health <= 0:
@@ -104,7 +104,6 @@ func gameOver():
 
 func _on_fairy_body_entered(body):
 	TRANSITION.changeEscena(\"res://Escenas/creditos.tscn\")
-	$fairy/AudioStreamPlayer.play()
 
 func _on_pelear_pressed():
 	batallaGUI.visible = false
@@ -112,6 +111,23 @@ func _on_pelear_pressed():
 
 func _on_ost_finished():
 	$Sounds/ost.play()
+
+
+func _on_area_2d_body_entered(body):
+	if body != self:
+		$GUI.visible = false
+		$Sounds/ost.stream_paused = true
+		$Sounds/win.play()
+
+		for i in range(8):
+			num -= 0.1
+			$Player2/Camera2D.zoom = Vector2(num,num)
+			await get_tree().create_timer(0.4)
+		
+
+
+func _on_win_finished():
+	$Sounds/win.play()
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4clr"]
@@ -121,20 +137,50 @@ size = Vector2(16, 2036.5)
 a = Vector2(1984, -1864)
 b = Vector2(0, 120)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_if0uj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwjas"]
+atlas = ExtResource("5_peuu7")
+region = Rect2(0, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7vhw"]
+atlas = ExtResource("5_peuu7")
+region = Rect2(160, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5ws1"]
+atlas = ExtResource("5_peuu7")
+region = Rect2(320, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykrgv"]
+atlas = ExtResource("5_peuu7")
+region = Rect2(480, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl8u6"]
+atlas = ExtResource("5_peuu7")
+region = Rect2(640, 0, 160, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3gxl"]
+atlas = ExtResource("5_peuu7")
+region = Rect2(800, 0, 160, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4p5gc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_5bqsy")
+"texture": SubResource("AtlasTexture_mwjas")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_7336d")
+"texture": SubResource("AtlasTexture_x7vhw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_offir")
+"texture": SubResource("AtlasTexture_i5ws1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_nr4ik")
+"texture": SubResource("AtlasTexture_ykrgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl8u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3gxl")
 }],
 "loop": true,
 "name": &"default",
@@ -143,6 +189,9 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_378t6"]
 radius = 128.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w00d"]
+size = Vector2(100.5, 45.75)
 
 [node name="nivel10" type="Node2D"]
 script = SubResource("GDScript_n5fbc")
@@ -183,25 +232,25 @@ editor_draw_limits = true
 [node name="GUI" parent="." instance=ExtResource("4_1ctke")]
 
 [node name="fairy" type="Area2D" parent="."]
-position = Vector2(1954, -736)
-metadata/_edit_group_ = true
+position = Vector2(1920, -745)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fairy"]
-position = Vector2(0, -4.76837e-07)
-scale = Vector2(4, 3.75)
-sprite_frames = SubResource("SpriteFrames_if0uj")
+position = Vector2(33.9999, -74)
+scale = Vector2(2.0875, 2.23423)
+sprite_frames = SubResource("SpriteFrames_4p5gc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fairy"]
+position = Vector2(37, -29)
 shape = SubResource("CircleShape2D_378t6")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="fairy"]
-stream = ExtResource("9_qbhij")
 
 [node name="Sounds" type="Node" parent="."]
 
 [node name="ost" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("10_kixt6")
 autoplay = true
+
+[node name="win" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("7_cjyih")
 
 [node name="mercaderes" type="Node" parent="."]
 
@@ -235,6 +284,10 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Merchant3" parent="mercaderes" instance=ExtResource("11_rpkhn")]
 position = Vector2(1946, 251)
+scale = Vector2(1.5, 1.5)
+
+[node name="Merchant10" parent="mercaderes" instance=ExtResource("11_rpkhn")]
+position = Vector2(1944, 1.00002)
 scale = Vector2(1.5, 1.5)
 
 [node name="Merchant4" parent="mercaderes" instance=ExtResource("11_rpkhn")]
@@ -299,6 +352,10 @@ scale = Vector2(3, 3)
 position = Vector2(1056, 384)
 scale = Vector2(2, 2)
 
+[node name="enemigo24" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1183, 257)
+scale = Vector2(2, 2)
+
 [node name="enemigo28" parent="enemigos" instance=ExtResource("13_eur7j")]
 position = Vector2(936, 276)
 scale = Vector2(2, 2)
@@ -307,12 +364,24 @@ scale = Vector2(2, 2)
 position = Vector2(1949, -251)
 scale = Vector2(2, 2)
 
+[node name="enemigo36" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1826, -253)
+scale = Vector2(2, 2)
+
 [node name="enemigo8" parent="enemigos" instance=ExtResource("13_eur7j")]
 position = Vector2(928, 644)
 scale = Vector2(2, 2)
 
 [node name="enemigo16" parent="enemigos" instance=ExtResource("13_eur7j")]
 position = Vector2(1571, 392)
+scale = Vector2(2, 2)
+
+[node name="enemigo31" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1695, 382)
+scale = Vector2(2, 2)
+
+[node name="enemigo32" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1825, 386)
 scale = Vector2(2, 2)
 
 [node name="enemigo17" parent="enemigos" instance=ExtResource("13_eur7j")]
@@ -343,25 +412,43 @@ scale = Vector2(2, 2)
 position = Vector2(1821, 256)
 scale = Vector2(2, 2)
 
-[node name="enemigo11" parent="enemigos" instance=ExtResource("13_eur7j")]
-position = Vector2(1444, -123)
+[node name="enemigo33" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1697, 258)
 scale = Vector2(2, 2)
 
-[node name="enemigo25" parent="enemigos" instance=ExtResource("13_eur7j")]
-position = Vector2(1948, -632)
+[node name="enemigo11" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1444, -123)
 scale = Vector2(2, 2)
 
 [node name="enemigo12" parent="enemigos" instance=ExtResource("13_eur7j")]
 position = Vector2(1575, -124)
 scale = Vector2(2, 2)
 
+[node name="enemigo34" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1564, 1)
+scale = Vector2(2, 2)
+
+[node name="enemigo35" parent="enemigos" instance=ExtResource("13_eur7j")]
+position = Vector2(1699, -126)
+scale = Vector2(2, 2)
+
 [node name="enemigo20" parent="enemigos" instance=ExtResource("13_eur7j")]
 position = Vector2(1702, -250)
 scale = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1945, -611)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_5w00d")
 
 [connection signal="body_entered" from="pared" to="." method="_on_pared_body_entered"]
 [connection signal="body_entered" from="diagonal" to="." method="_on_diagonal_body_entered"]
 [connection signal="body_entered" from="fairy" to="." method="_on_fairy_body_entered"]
 [connection signal="finished" from="Sounds/ost" to="." method="_on_ost_finished"]
+[connection signal="finished" from="Sounds/win" to="." method="_on_win_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 
 [editable path="Player2"]

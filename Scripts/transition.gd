@@ -110,6 +110,14 @@ func mostrarFigura(i : int):
 		await contenedor.animation_finished
 		contenedor.visible = false
 		
-		
-
+	
+func catalan(n):
+	# Base Case
+	if n <= 1:
+		return 1
+	# Catalan(n) is the sum of catalan(i)*catalan(n-i-1)
+	var res = 0
+	for i in range(n):
+		res += catalan(i) * catalan(n-i-1)
+	return res
 

@@ -694,7 +694,7 @@ metadata/_edit_group_ = true
 [node name="AnimationTree" parent="player" index="2"]
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_41ipf")
 
-[node name="Camera2D" parent="player" index="8"]
+[node name="Camera2D" parent="player" index="7"]
 limit_right = 2250
 editor_draw_limits = true
 

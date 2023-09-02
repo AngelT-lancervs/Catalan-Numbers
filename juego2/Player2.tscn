@@ -85,8 +85,6 @@ func correrDerecha():
 			corriendoDerecha = false
 			return false
 
-
-
 func correrArriba():
 	if Input.is_action_just_pressed(\"ui_up\") && !corriendoArriba and !corriendoDerecha:
 		movimientoMax = 0 
@@ -103,11 +101,6 @@ func correrArriba():
 			animation.play(\"idle\")
 			corriendoArriba = false
 			return false
-
-func hurt():
-	animation.play(\"hurt\")
-	await animation.animation_looped
-	animation.play(\"idle\")
 
 func recibirDaño(i):
 	$AudioStreamPlayer2D.play()

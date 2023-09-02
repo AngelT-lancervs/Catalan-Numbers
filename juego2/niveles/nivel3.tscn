@@ -65,6 +65,9 @@ var numMoves
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$GUI/Control/n_minus.text = \"5\"
+	$GUI/Control/numCatalanActual.text = \"= \" + str(TRANSITION.catalan(5))
+	$GUI/Control/posiblesC.text = str(TRANSITION.catalan(5))
 	player.animation.play(\"idle\")
 	$fairy/AnimatedSprite2D.play(\"default\")
 	crearMatrix(5)
