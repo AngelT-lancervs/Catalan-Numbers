@@ -263,7 +263,9 @@ script = SubResource("GDScript_6qy3i")
 
 [node name="animaciones" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fqo6c")
-animation = &"hurt"
+animation = &"attack"
+frame = 5
+frame_progress = 1.0
 
 [node name="hitboxglobal" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 20)
