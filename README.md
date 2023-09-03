@@ -5,5 +5,5 @@ Juego creado usando como concepto dos aplicaciones de los números de Euler-Cata
 Link para descargar la versión de Windows y la versión de Linux:
 https://drive.google.com/file/d/1HhAMRtM2M5DtMJNIYF1zar_HJMv0SM_H/view?usp=sharing
 
-Link para jugar la versión de Navegador
+Link para jugar la versión de Navegador:
 https://lancervs.itch.io/catalans-numbers
