@@ -84,7 +84,7 @@ offset_left = 454.0
 offset_top = 35.0
 offset_right = 483.0
 offset_bottom = 61.0
-text = "n+2
+text = "  n
 "
 label_settings = SubResource("LabelSettings_7fmlo")
 

@@ -1,3 +1,4 @@
+res://Escenas/gui.tscn
 res://juego2/niveles/nivel1.tscn
 res://juego2/niveles/nivel2.tscn
 res://juego2/niveles/nivel3.tscn
@@ -7,3 +8,5 @@ res://juego2/niveles/nivel6.tscn
 res://juego2/niveles/nivel7.tscn
 res://juego2/niveles/nivel8.tscn
 res://juego2/niveles/nivel9.tscn
+res://Escenas/personaje.tscn
+res://Escenas/S2_N1/Nivel_6.tscn
