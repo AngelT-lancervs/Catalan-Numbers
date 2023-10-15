@@ -6,4 +6,4 @@ Link para descargar la versión de Windows y la versión de Linux:
 https://drive.google.com/file/d/1Twqt55mgytDuXE5kEP4MciMYt8fI-9yH/view?usp=sharing
 
 Link para jugar la versión de Navegador:
-https://angeltomala.itch.io/catalans-numbers
+https://lancervs.itch.io/catalans-numbers
